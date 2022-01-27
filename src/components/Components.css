@@ -1,0 +1,67 @@
+/* ProjectsPage.js & FreelancePage.js styles */
+
+.tvPreview {
+  width: 25vw;
+  max-width: 300px;
+  padding-left: 15px;
+  flex-grow: 0;
+}
+
+.lgPreview {
+  width: 50vw;
+  flex-grow: 0;
+}
+
+.daPreview {
+  width: 50vw;
+  max-width: 550px;
+  flex-grow: 0;
+}
+
+.clientPreview {
+  width: 35vw;
+}
+
+.clientLogo {
+  width: 10vw;
+}
+
+.clientLogo:hover {
+  transform: scale(0.99);
+  opacity: 0.75;
+}
+
+.paragraph {
+  font-family: "Bell MT", sans-serif;
+  font-size: 14pt;
+  justify-content: center;
+}
+
+/* CornerGuide.js styles */
+
+.blurb {
+  width: 35vw;
+}
+
+.portrait {
+  width: 15vw;
+}
+
+.guideContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Footer.js styles */
+
+.footerButton {
+  height: 5vh;
+  min-height: 25px;
+}
+
+.footerButton:hover {
+  transform: scale(0.98);
+  opacity: 0.75;
+}
