@@ -21,8 +21,8 @@ export class MainApp extends Component {
                 </View>
 
                 <CornerGuide/>
-                <FreelancePage/>
-                <ProjectsPage/>
+                <FreelancePage mobile={this.props.mobile}/>
+                <ProjectsPage mobile={this.props.mobile}/>
 
                 <br/>
                 <Footer/>

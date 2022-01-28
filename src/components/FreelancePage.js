@@ -77,19 +77,23 @@ export class FreelancePage extends Component {
             )
         }
 
+        const imageStyle = (this.props.mobile) ? "mobileImage" : "clientPreview";
+        const logoStyle = (this.props.mobile) ? "mobileLogo" : "clientLogo";
+
         return(
             <View style={styles.container}>
-                <View style={styles.title}>
-                    <img src={title} alt={""}/>
-                </View>
-                <Section image={preview1} imageStyle={"clientPreview"} content={itemOneContent} flipped={true}/>
-                <Section image={preview2} imageStyle={"clientPreview"} content={itemTwoContent}/>
+                <div className={"title"}>FREELANCE</div>
+                <Section image={preview1} imageStyle={imageStyle}
+                         content={itemOneContent} mobile={this.props.mobile} flipped={true}/>
+                <Section image={preview2} imageStyle={imageStyle}
+                         content={itemTwoContent} mobile={this.props.mobile}/>
                 <View style={styles.logos}>
-                    <img title={"Sound Integrative Women's Health"} className={"clientLogo"} src={client1} alt={""}/>
-                    <img title={"Alina Hairstylist"} className={"clientLogo"} src={client2} alt={""}/>
-                    <img title={"Inner Harmony Acupuncture"} className={"clientLogo"} src={client3} alt={""}/>
+                    <img title={"Sound Integrative Women's Health"} className={logoStyle} src={client1} alt={""}/>
+                    <img title={"Alina Hairstylist"} className={logoStyle} src={client2} alt={""}/>
+                    <img title={"Inner Harmony Acupuncture"} className={logoStyle} src={client3} alt={""}/>
                 </View>
-                <Section image={preview3} imageStyle={"clientPreview"} content={itemFourContent} flipped={true}/>
+                <Section image={preview3} imageStyle={imageStyle}
+                         content={itemFourContent} mobile={this.props.mobile} flipped={true}/>
             </View>
         );
     }
@@ -99,11 +103,6 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: "column",
         padding: 10,
-    },
-    title: {
-        flexDirection: "row",
-        justifyContent: "center",
-        height: "10vh",
     },
     logos: {
         flexDirection: "row",

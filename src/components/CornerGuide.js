@@ -35,8 +35,6 @@ export class CornerGuide extends Component {
         this.setState({
             position: scrolled,
         });
-
-        console.log(this.state.position); // debug
     }
 
 

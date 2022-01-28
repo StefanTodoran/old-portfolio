@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet} from "react-native";
-import {TouchableOpacity, View} from "react-native-web";
+import {Text, TouchableOpacity, View} from "react-native-web";
 import './Components.css';
 
 import resume from "../assets/resume.png";
@@ -16,21 +16,16 @@ export class Footer extends Component {
                 behavior: 'smooth'
             });
         };
-        const emailContact = ({ email, subject, body, children }) => {
-            return (
-                <a href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`}>{children}</a>
-            );
-        };
-
+        const mail = "mailto:stodoran@uw.edu?subject=Hey!+Lets+work+together!";
         return (
             <div>
                 <hr/>
-                <View style={styles.container}>
+                <View style={styles.footer}>
                     <div>
                         <a href={resumePDF} target = "_blank">
                             <img className={"footerButton"} src={resume} alt={"RESUME"}/>
                         </a>
-                        <a href={"mailto:stodoran@uw.edu?subject=Hey!+Lets+work+together!"} target = "_blank">
+                        <a href={mail} target = "_blank">
                             <img className={"footerButton"} src={contact} alt={"CONTACT"}/>
                         </a>
                     </div>
@@ -44,11 +39,14 @@ export class Footer extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    footer: {
         flexDirection: "row-reverse",
         justifyContent: "space-between",
         paddingVertical: 10,
         paddingLeft: "2vh",
         flex: 1,
     },
+    copyright: {
+        color: "#999",
+    }
 });

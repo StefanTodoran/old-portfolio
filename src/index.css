@@ -18,3 +18,10 @@ code {
   url("./assets/Bell MT.ttf") format("truetype");
   /*font-weight: bold;*/
 }
+
+@font-face {
+  font-family: "Eras Bold ITC";
+  src: local("ErasBoldITC"),
+  url("./assets/ErasBoldITC.ttf") format("truetype");
+  /*font-weight: bold;*/
+}

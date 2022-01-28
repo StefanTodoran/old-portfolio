@@ -26,8 +26,8 @@ export class ProjectsPage extends Component {
                         bad technique can genuinely be dangerous.
                     </div>
                     <br/>
-                    <div className={"paragraph"}>That’s where <a href={"https://www.youtube.com/watch?v=tSOshI3OD_Q"} target="_blank">Technivision</a>
-                        comes in; by utilizing pose estimation to provide users with personalized feedback on how to improve their technique in
+                    <div className={"paragraph"}>That’s where <a href={"https://www.youtube.com/watch?v=tSOshI3OD_Q"} target="_blank">Technivision</a> comes
+                        in; by utilizing pose estimation to provide users with personalized feedback on how to improve their technique in
                         various exercises, Technivision has the goal of teaching users how to achieve safer, more effective work outs.
                     </div>
                 </div>
@@ -79,15 +79,19 @@ export class ProjectsPage extends Component {
             )
         }
 
+        const tvStyle = (this.props.mobile) ? "tvMobileImage" : "tvPreview";
+        const lgStyle = (this.props.mobile) ? "mobileImage" : "lgPreview";
+        const daStyle = (this.props.mobile) ? "mobileImage" : "daPreview";
 
         return(
             <View style={styles.container}>
-                <View style={styles.title}>
-                    <img src={title} alt={""}/>
-                </View>
-                <Section image={technivision} imageStyle={"tvPreview"} content={itemOneContent}/>
-                <Section image={linguini} imageStyle={"lgPreview"} content={itemTwoContent} flipped={true}/>
-                <Section image={datina} imageStyle={"daPreview"} content={itemThreeContent}/>
+                <div className={"title"}>PROJECTS</div>
+                <Section image={technivision} imageStyle={tvStyle}
+                         content={itemOneContent} mobile={this.props.mobile}/>
+                <Section image={linguini} imageStyle={lgStyle}
+                         content={itemTwoContent} mobile={this.props.mobile} flipped={true}/>
+                <Section image={datina} imageStyle={daStyle}
+                         content={itemThreeContent} mobile={this.props.mobile}/>
             </View>
         );
     }
@@ -97,10 +101,6 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: "column",
         padding: 10,
-    },
-    title: {
-        flexDirection: "row",
-        justifyContent: "center",
-        height: "10vh",
+        overflow: "hidden",
     },
 });

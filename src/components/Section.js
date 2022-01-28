@@ -5,6 +5,16 @@ import {StyleSheet} from "react-native";
 
 export class Section extends Component {
     render() {
+        if (this.props.mobile) {
+            return(
+                <View style={styles.mobile}>
+                    <this.props.content/>
+                    <br/>
+                    <img className={this.props.imageStyle} src={this.props.image} alt={""}/>
+                </View>
+            );
+        }
+
         if (this.props.flipped) {
             return(
                 <View style={styles.container}>
@@ -43,4 +53,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    mobile: {
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 15,
+    }
 });

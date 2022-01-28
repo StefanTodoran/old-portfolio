@@ -1,5 +1,13 @@
 /* ProjectsPage.js & FreelancePage.js styles */
 
+.mobileImage {
+  width: 90vw;
+}
+
+.tvMobilePreview {
+  width: 50vw;
+}
+
 .tvPreview {
   width: 25vw;
   max-width: 300px;
@@ -26,6 +34,10 @@
   width: 10vw;
 }
 
+.mobileLogo {
+  width: 30vw;
+}
+
 .clientLogo:hover {
   transform: scale(0.99);
   opacity: 0.75;
@@ -37,14 +49,27 @@
   justify-content: center;
 }
 
+.title {
+  font-family: "Eras Bold ITC", monospace;
+  font-size: 4.5em;
+  text-align: center;
+  width: 100%;
+  min-height: 1em !important;
+  background: -webkit-linear-gradient(#6647FF, #BB47FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* CornerGuide.js styles */
 
 .blurb {
   width: 35vw;
+  min-width: 350px;
 }
 
 .portrait {
   width: 15vw;
+  min-width: 150px;
 }
 
 .guideContainer {
