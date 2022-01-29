@@ -7,7 +7,6 @@ import './Components.css';
 import technivision from "../assets/technivision.gif";
 import linguini from "../assets/linguini.png";
 import datina from "../assets/datina.gif";
-import title from "../assets/projects.gif";
 
 export class ProjectsPage extends Component {
     render() {
@@ -59,20 +58,17 @@ export class ProjectsPage extends Component {
         const itemThreeContent = () => {
             return(
                 <div>
-                    <div className={"paragraph"}><a href={"https://www.facebook.com/datinaseattle"} target="_blank">Datina</a> is Seattle-based
-                        volunteer-led organization which helps participants to enrich their cultural lives and pursue personal fulfillment
-                        through the performance of traditional dances and music, as well as learning about arts and crafts from Romania. Datina
-                        strives to preserve and promote the Romanian heritage and culture.
+                    <div className={"paragraph"}><a href={"https://www.facebook.com/datinaseattle"} target="_blank">Datina</a> is a Romanian
+                        folkloric ensemble based in Seattle, Washington. The group, made entirely of volunteers, helps participants to enrich
+                        their cultural lives and pursue personal fulfillment through the performance of traditional dances and music, as well
+                        as learning about arts and crafts from Romania. Datina strives to preserve and promote the Romanian heritage and culture.
                     </div>
                     <br/>
-                    <div className={"paragraph"}>I originally got involved with Datina volunteering as a Theatrical Sound Engineer, and as I
+                    <div className={"paragraph"}>I originally got involved with the group volunteering as a Theatrical Sound Engineer, and as I
                         managed the audio at performances and practices, I grew to be dissatisfied with the existing premium music software.
-                        Both out of a desire to save money for the non-profit and low budget group, and as a way to address these shortcomings
+                        Both out of a desire to save money—the non-profit group is low budget and funded by donations—and as a way to address these shortcomings
                         with existing software, I created a music manager Python program to organize, edit and play music for both practices and
-                        performances.
-                    </div>
-                    <br/>
-                    <div className={"paragraph"}>As of now, the program does not yet have an official release for public use, but I am continuing
+                        performances. As of now, the program does not yet have an official release for public use, but I am continuing
                         to develop it with this goal.
                     </div>
                 </div>

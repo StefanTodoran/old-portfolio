@@ -1,4 +1,4 @@
-import React, {Component, useRef} from "react";
+import React, {Component} from "react";
 import {View} from "react-native-web";
 import {StyleSheet} from "react-native";
 

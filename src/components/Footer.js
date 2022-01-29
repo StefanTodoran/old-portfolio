@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet} from "react-native";
-import {Text, TouchableOpacity, View} from "react-native-web";
+import {TouchableOpacity, View} from "react-native-web";
 import './Components.css';
 
 import resume from "../assets/resume.png";

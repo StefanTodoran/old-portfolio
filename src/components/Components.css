@@ -1,4 +1,94 @@
+#topArrow {
+  animation: fade 2.5s infinite;
+}
+
+#middleArrow {
+  animation: fadeDelayOne 2.5s infinite;
+}
+
+#bottomArrow {
+  animation: fadeDelayTwo 2.5s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  16% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeDelayOne {
+  0% {
+    opacity: 0;
+  }
+  16% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeDelayTwo {
+  0% {
+    opacity: 0;
+  }
+  16% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 0;
+  }
+  48% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* ProjectsPage.js & FreelancePage.js styles */
+
+.line {
+  height: 1px;
+  background-color: lightgray;
+  flex-grow: 1;
+}
 
 .mobileImage {
   width: 90vw;
@@ -38,15 +128,27 @@
   width: 30vw;
 }
 
-.clientLogo:hover {
-  transform: scale(0.99);
-  opacity: 0.75;
-}
+/*.clientLogo:hover {*/
+/*  transform: scale(0.99);*/
+/*  opacity: 0.75;*/
+/*}*/
 
 .paragraph {
   font-family: "Bell MT", sans-serif;
   font-size: 14pt;
   justify-content: center;
+}
+
+.logoLabel {
+  font-family: "Bell MT", sans-serif;
+  font-size: 14pt;
+  justify-content: center;
+  color: gray;
+  margin: 5px;
+}
+
+.divider {
+  text-align: center;
 }
 
 .title {
@@ -55,9 +157,27 @@
   text-align: center;
   width: 100%;
   min-height: 1em !important;
-  background: -webkit-linear-gradient(#6647FF, #BB47FF);
+  /*background: -webkit-linear-gradient(#6647FF, #BB47FF);*/
+  background: linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);
+  background-size: 100% 200%;
+  animation: gradient 5s ease infinite;
+  background-clip: text;
+  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 50% 30%;
+  }
+  50% {
+    background-position: 50% 65%;
+  }
+  100% {
+    background-position: 50% 30%;
+  }
 }
 
 /* CornerGuide.js styles */

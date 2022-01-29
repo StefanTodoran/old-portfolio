@@ -7,7 +7,6 @@ import './Components.css';
 import preview1 from "../assets/iha_preview_alt.png";
 import preview2 from "../assets/siwh_preview_2.png";
 import preview3 from "../assets/siwh_preview_1.png";
-import title from "../assets/freelance.gif";
 import client1 from "../assets/client1.png";
 import client2 from "../assets/client2.png";
 import client3 from "../assets/client3.png";
@@ -59,18 +58,22 @@ export class FreelancePage extends Component {
         const itemFourContent = () => {
             return(
                 <div>
-                    <div className={"paragraph"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at tincidunt mauris,
-                        quis mollis orci. Suspendisse eu eleifend mauris. Vestibulum lobortis, lacus sed fringilla lobortis,
-                        neque urna semper odio, quis interdum ex massa quis purus. Fusce sodales lectus sit amet tristique
-                        cursus. Mauris iaculis vel dui a eleifend. Ut ac dolor a odio pharetra auctor. Mauris aliquet lorem
-                        facilisis, lacinia massa ac, aliquet massa. Duis dictum neque eget erat sodales auctor eu euismod erat.
+                    <div className={"paragraph"}>If you're in need of a website yourself, or just curious about my design
+                        process and want to learn more, click the contact button at the bottom of this page to shoot me an
+                        email and see if my services are right for you.
                     </div>
                     <br/>
-                    <div className={"paragraph"}>Nunc mollis porta urna, a convallis odio laoreet a. Nulla in metus vitae tortor
-                        luctus euismod et ac ipsum. Nunc vel porttitor erat, vel efficitur turpis. Aenean nisl nibh, auctor et
-                        vehicula quis, mattis et orci. Duis dolor lorem, pretium a velit ac, venenatis dignissim nisi. Quisque
-                        eu est in neque lacinia sollicitudin auctor vel nulla. Aenean accumsan, lacus ut iaculis imperdiet,
-                        justo nisi porta lacus, eget facilisis odio massa ac erat.
+                    <div className={"divider"}>* * *</div>
+                    <br/>
+                    <div className={"paragraph"}>Similarly to my goals in freelance work, I strive to make the projects I
+                        work on relevant to my immediate community, whether that comes in the form of building a program
+                        to organize and edit music for the local folk ensemble Datina, or working on an app that uses pose
+                        estimation to provide users doing socially distanced workouts with feedback on their technique. I
+                        study computer science because of the opportunity to directly affect and improve the world around
+                        me through the projects I work on. The next section is a couple of highlights from these very projects,
+                        specifically some of the work that I consider to be the most noteworthy or meaningful. While I'm always
+                        looking forward to the next opportunity or project, I always try to give my old projects updates when I
+                        have a break from classes and other commitments, so some of these are still in progress.
                     </div>
                     <br/>
                 </div>
@@ -87,11 +90,21 @@ export class FreelancePage extends Component {
                          content={itemOneContent} mobile={this.props.mobile} flipped={true}/>
                 <Section image={preview2} imageStyle={imageStyle}
                          content={itemTwoContent} mobile={this.props.mobile}/>
+
+                <br/>
+                <View style={styles.logosTitle}>
+                    <div className={"line"}></div>
+                    <div className={"logoLabel"}>RECENT CLIENTS</div>
+                    <div className={"line"}></div>
+                </View>
                 <View style={styles.logos}>
                     <img title={"Sound Integrative Women's Health"} className={logoStyle} src={client1} alt={""}/>
                     <img title={"Alina Hairstylist"} className={logoStyle} src={client2} alt={""}/>
                     <img title={"Inner Harmony Acupuncture"} className={logoStyle} src={client3} alt={""}/>
                 </View>
+                <div className={"line"}></div>
+                <br/>
+
                 <Section image={preview3} imageStyle={imageStyle}
                          content={itemFourContent} mobile={this.props.mobile} flipped={true}/>
             </View>
@@ -104,10 +117,15 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         padding: 10,
     },
+    logosTitle: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+    },
     logos: {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        padding: 10,
+        paddingHorizontal: 10,
     },
 });
