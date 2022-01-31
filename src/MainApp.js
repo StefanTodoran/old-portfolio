@@ -7,8 +7,16 @@ import {ProjectsPage} from "./components/ProjectsPage";
 import {FreelancePage} from "./components/FreelancePage";
 import {Footer} from "./components/Footer";
 import {ScrollAnim} from "./components/ScrollAnim";
+import {Header} from "./components/Header";
 
 export class MainApp extends Component {
+    constructor(props) {
+        super(props)
+        this.freelanceRef = React.createRef();
+        this.projectsRef = React.createRef();
+        this.topRef = React.createRef();
+    }
+
     state = {
         tallMode: false,
         // tallMode handles resizing for the desktop site. Mobile is always in
@@ -42,14 +50,25 @@ export class MainApp extends Component {
                 <ScrollAnim/>
 
                 <CornerGuide/>
-                <FreelancePage mobile={this.props.mobile || this.state.tallMode}/>
-                <ProjectsPage mobile={this.props.mobile || this.state.tallMode}/>
+                <FreelancePage mobile={this.props.mobile || this.state.tallMode} refProp={this.freelanceRef}/>
+                <ProjectsPage mobile={this.props.mobile || this.state.tallMode} refProp={this.projectsRef}/>
 
                 <br/>
+                <Header freelanceScroll={this.freelanceScroll}
+                        projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
                 <Footer/>
             </div>
         );
     }
+
+    freelanceScroll = () => this.freelanceRef.current.scrollIntoView();
+    projectsScroll = () => this.projectsRef.current.scrollIntoView();
+    introScroll = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 }
 
 const styles = StyleSheet.create({

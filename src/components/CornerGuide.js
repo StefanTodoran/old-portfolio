@@ -39,7 +39,7 @@ export class CornerGuide extends Component {
 
 
     render() {
-        const show = (this.state.position < 0.11) ? intro : projects;
+        const show = (this.state.position < 0.1) ? intro : projects;
         return(
             <div className={"guideContainer"}>
                 <View style={styles.container}>

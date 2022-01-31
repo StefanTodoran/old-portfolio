@@ -80,7 +80,8 @@ export class ProjectsPage extends Component {
         const daStyle = (this.props.mobile) ? "mobileImage" : "daPreview";
 
         return(
-            <View style={styles.container}>
+            <View style={styles.container} ref={this.props.refProp}>
+                <br/><br/>
                 <div className={"title"}>PROJECTS</div>
                 <Section image={technivision} imageStyle={tvStyle}
                          content={itemOneContent} mobile={this.props.mobile}/>

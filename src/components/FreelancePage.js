@@ -51,7 +51,6 @@ export class FreelancePage extends Component {
                         and all of this for a FAR cheaper price.
                     </div>
                     <br/>
-                    <div className={"paragraph"}>Here are a few of my recent clients:</div>
                 </div>
             )
         }
@@ -84,7 +83,8 @@ export class FreelancePage extends Component {
         const logoStyle = (this.props.mobile) ? "mobileLogo" : "clientLogo";
 
         return(
-            <View style={styles.container}>
+            <View style={styles.container} ref={this.props.refProp}>
+                <br/><br/>
                 <div className={"title"}>FREELANCE</div>
                 <Section image={preview1} imageStyle={imageStyle}
                          content={itemOneContent} mobile={this.props.mobile} flipped={true}/>
@@ -93,16 +93,18 @@ export class FreelancePage extends Component {
 
                 <br/>
                 <View style={styles.logosTitle}>
-                    <div className={"line"}></div>
+                    <div className={"line"}/>
                     <div className={"logoLabel"}>RECENT CLIENTS</div>
-                    <div className={"line"}></div>
+                    <div className={"line"}/>
                 </View>
                 <View style={styles.logos}>
                     <img title={"Sound Integrative Women's Health"} className={logoStyle} src={client1} alt={""}/>
                     <img title={"Alina Hairstylist"} className={logoStyle} src={client2} alt={""}/>
                     <img title={"Inner Harmony Acupuncture"} className={logoStyle} src={client3} alt={""}/>
                 </View>
-                <div className={"line"}></div>
+                <View style={styles.logosTitle}>
+                    <div className={"longLine"}/>
+                </View>
                 <br/>
 
                 <Section image={preview3} imageStyle={imageStyle}
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
     },
     logosTitle: {
         flexDirection: "row",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
     },
     logos: {
