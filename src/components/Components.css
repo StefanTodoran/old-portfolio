@@ -84,18 +84,21 @@
 
 /* ProjectsPage.js & FreelancePage.js styles */
 
-.line {
+.lineLeft, .lineRight, .longLine {
   height: 1px;
   background-color: lightgray;
   flex-grow: 1;
-  max-width: 20vw;
 }
 
-.longLine {
-  height: 1px;
-  background-color: lightgray;
-  flex-grow: 1;
-  max-width: 50vw;
+.lineLeft, .longLine {
+  margin-left: 10%;
+}
+
+/*background: -webkit-gradient(linear, 0 0, 100% 0, from(lightgray), to(white));*/
+/*background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(lightgray));*/
+
+.lineRight, .longLine {
+  margin-right: 10%;
 }
 
 .mobileImage {
@@ -142,13 +145,13 @@
 /*}*/
 
 .paragraph {
-  font-family: "Bell MT", sans-serif;
+  font-family: "Avenir Light", sans-serif;
   font-size: 14pt;
   justify-content: center;
 }
 
 .logoLabel {
-  font-family: "Bell MT", sans-serif;
+  font-family: "Avenir Light", sans-serif;
   font-size: 14pt;
   justify-content: center;
   color: gray;

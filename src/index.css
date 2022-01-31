@@ -13,9 +13,9 @@ code {
 }
 
 @font-face {
-  font-family: "Bell MT";
-  src: local("Bell MT"),
-  url("./assets/Bell MT.ttf") format("truetype");
+  font-family: "Avenir Light";
+  src: local("Avenir Light"),
+  url("./assets/Avenir Light.ttf") format("truetype");
   /*font-weight: bold;*/
 }
 

@@ -54,7 +54,7 @@ export class MainApp extends Component {
                 <ProjectsPage mobile={this.props.mobile || this.state.tallMode} refProp={this.projectsRef}/>
 
                 <br/>
-                <Header freelanceScroll={this.freelanceScroll}
+                <Header freelanceScroll={this.freelanceScroll} mobile={this.props.mobile || this.state.tallMode}
                         projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
                 <Footer/>
             </div>

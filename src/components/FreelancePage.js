@@ -93,9 +93,9 @@ export class FreelancePage extends Component {
 
                 <br/>
                 <View style={styles.logosTitle}>
-                    <div className={"line"}/>
+                    <div className={"lineLeft"}/>
                     <div className={"logoLabel"}>RECENT CLIENTS</div>
-                    <div className={"line"}/>
+                    <div className={"lineRight"}/>
                 </View>
                 <View style={styles.logos}>
                     <img title={"Sound Integrative Women's Health"} className={logoStyle} src={client1} alt={""}/>

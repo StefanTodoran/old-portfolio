@@ -6,7 +6,7 @@ import {MenuItem} from "./MenuItem";
 
 export class Header extends Component {
     render() {
-
+        console.log(this.props.mobile);
 
         return (
             <View style={styles.navbar}>
@@ -15,9 +15,10 @@ export class Header extends Component {
                     <MenuItem text={"FREELANCE"} onPress={this.props.freelanceScroll} styleClass={"menuItem"}/>
                     <MenuItem text={"PROJECTS"} onPress={this.props.projectsScroll} styleClass={"menuItem"}/>
                 </View>
+                {(!this.props.mobile) &&
                 <View style={{flexDirection: "row"}}>
                     <div className={"menuName"}>STEFAN TODORAN</div>
-                </View>
+                </View>}
             </View>
         );
     }
