@@ -10,6 +10,7 @@ import preview3 from "../assets/siwh_preview_1.png";
 import client1 from "../assets/client1.png";
 import client2 from "../assets/client2.png";
 import client3 from "../assets/client3.png";
+import client4 from "../assets/client4.png";
 
 export class FreelancePage extends Component {
     render() {
@@ -100,6 +101,7 @@ export class FreelancePage extends Component {
                 <View style={styles.logos}>
                     <img title={"Sound Integrative Women's Health"} className={logoStyle} src={client1} alt={""}/>
                     <img title={"Alina Hairstylist"} className={logoStyle} src={client2} alt={""}/>
+                    <img title={"TDSW Solutions Corp."} className={logoStyle} src={client4} alt={""}/>
                     <img title={"Inner Harmony Acupuncture"} className={logoStyle} src={client3} alt={""}/>
                 </View>
                 <View style={styles.logosTitle}>

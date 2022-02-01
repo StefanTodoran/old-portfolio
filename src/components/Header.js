@@ -6,8 +6,6 @@ import {MenuItem} from "./MenuItem";
 
 export class Header extends Component {
     render() {
-        console.log(this.props.mobile);
-
         return (
             <View style={styles.navbar}>
                 <View style={{flexDirection: "row"}}>

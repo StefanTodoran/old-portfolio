@@ -133,18 +133,16 @@
 
 .clientLogo {
   width: 10vw;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .mobileLogo {
-  width: 30vw;
+  width: 20vw;
 }
 
-/*.clientLogo:hover {*/
-/*  transform: scale(0.99);*/
-/*  opacity: 0.75;*/
-/*}*/
 
-.paragraph {
+.paragraph, .intro {
   font-family: "Avenir Light", sans-serif;
   font-size: 14pt;
   justify-content: center;
@@ -223,14 +221,11 @@
 
 /* CornerGuide.js styles */
 
-.blurb {
-  width: 35vw;
-  min-width: 315px;
-}
-
 .portrait {
   width: 15vw;
+  height: 21vw;
   min-width: 135px;
+  min-height: 189px;
 }
 
 .guideContainer {
@@ -238,6 +233,21 @@
   position: sticky;
   bottom: 0;
   z-index: 1;
+}
+
+.intro {
+  max-width: 420px;
+  font-size: 20pt;
+}
+
+.quote, .quoteRight {
+  width: 50px;
+  height: 50px;
+}
+
+.quoteRight {
+  transform: scaleX(-1) scaleY(-1);
+  margin-top: 220px;
 }
 
 /* Footer.js styles */

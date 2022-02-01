@@ -40,8 +40,8 @@ export class Footer extends Component {
                         </g>
                         <defs>
                             <linearGradient id="paint0_linear_9_3" x1="24" y1="-33" x2="24" y2="67" gradientUnits="userSpaceOnUse">
-                                <stop offset="0.333333" stop-color="#6647FF"/>
-                                <stop offset="0.598958" stop-color="#BB47FF"/>
+                                <stop offset="0.333333" stopColor="#6647FF"/>
+                                <stop offset="0.598958" stopColor="#BB47FF"/>
                             </linearGradient>
                         </defs>
                     </svg>

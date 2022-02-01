@@ -3,7 +3,7 @@ import './Components.css';
 import {View} from "react-native-web";
 import {StyleSheet} from "react-native";
 
-export class Section extends Component {
+export class ParallaxSection extends Component {
     render() {
         if (this.props.mobile) {
             return(
@@ -17,9 +17,10 @@ export class Section extends Component {
 
         if (this.props.flipped) {
             return(
-                <View>
+                <View style={styles.container}>
                     <View style={styles.project}>
-                        <img className={this.props.imageStyle} src={this.props.image} alt={""}/>
+                        <img className={this.props.imageStyle} src={this.props.image}
+                             alt={""} ref={this.props.imageRef}/>
                         <View style={styles.description}>
                             <this.props.content/>
                         </View>
@@ -28,12 +29,13 @@ export class Section extends Component {
             );
         }
         return(
-            <View>
+            <View style={styles.container}>
                 <View style={styles.project}>
                     <View style={styles.description}>
                         <this.props.content/>
                     </View>
-                    <img className={this.props.imageStyle} src={this.props.image} alt={""}/>
+                    <img className={this.props.imageStyle} src={this.props.image}
+                         alt={""} ref={this.props.imageRef}/>
                 </View>
             </View>
         );
@@ -41,6 +43,11 @@ export class Section extends Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        height: "150vh",
+        alignItems: "center",
+        justifyContent: "center",
+    },
     project: {
         flexDirection: "row",
         justifyContent: "center",

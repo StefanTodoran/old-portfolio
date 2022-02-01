@@ -4,8 +4,7 @@ import {StyleSheet} from "react-native";
 
 import './Components.css';
 import portrait from "../assets/portrait.png";
-import intro from "../assets/intro.png";
-import projects from "../assets/projects.png";
+import quote from "../assets/quote.png";
 
 export class CornerGuide extends Component {
     state = {
@@ -39,12 +38,16 @@ export class CornerGuide extends Component {
 
 
     render() {
+        const intro = <div><h2>Hey there!</h2><p>I'm Stefan, a computer science student at the University of Washington with a passion for UX Design and web development.</p></div>
+        const projects = <div><h2>A bit about me...</h2><p>I always seek to push my boundaries, exploring all corners of computer science. Here's some of the work I'm most proud of.</p></div>
         const show = (this.state.position < 0.1) ? intro : projects;
         return(
             <div className={"guideContainer"}>
                 <View style={styles.container}>
                     <img className={"portrait"} src={portrait} alt={""}/>
-                    <img className={"blurb"} src={show} alt={""}/>
+                    <img className={"quoteRight"} src={quote} alt={""}/>
+                    <div className={"intro"}>{show}</div>
+                    <img className={"quote"} src={quote} alt={""}/>
                 </View>
             </div>
         );
@@ -54,6 +57,7 @@ export class CornerGuide extends Component {
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row-reverse",
+        alignItems: "center",
         flex: 1,
     },
 });
