@@ -44,19 +44,20 @@ export class MainApp extends Component {
     }
 
     render() {
+        const mobile = this.props.mobile || this.state.tallMode;
         return (
             <div className={"background"}>
                 <ScrollAnim/>
                 <ScrollAnim/>
 
-                <CornerGuide/>
-                <FreelancePage mobile={this.props.mobile || this.state.tallMode} refProp={this.freelanceRef}/>
-                <ProjectsPage mobile={this.props.mobile || this.state.tallMode} refProp={this.projectsRef}/>
+                <CornerGuide mobile={mobile}/>
+                <FreelancePage mobile={mobile} refProp={this.freelanceRef}/>
+                <ProjectsPage mobile={mobile} refProp={this.projectsRef}/>
 
                 <br/>
-                <Header freelanceScroll={this.freelanceScroll} mobile={this.props.mobile || this.state.tallMode}
+                <Header freelanceScroll={this.freelanceScroll} mobile={mobile}
                         projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
-                <Footer/>
+                <Footer mobile={mobile}/>
             </div>
         );
     }

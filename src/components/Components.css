@@ -144,7 +144,7 @@
 
 .paragraph, .intro {
   font-family: "Avenir Light", sans-serif;
-  font-size: 14pt;
+  font-size: min(19px,3.5vmin);
   justify-content: center;
 }
 
@@ -161,8 +161,11 @@
 }
 
 .title {
+  font-size: min(72px,12vmin);
+}
+
+.title {
   font-family: "Eras Bold ITC", monospace;
-  font-size: 4.5em;
   text-align: center;
   min-height: 1em !important;
   background: -webkit-linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);
@@ -174,7 +177,7 @@
   -webkit-text-fill-color: transparent;
   animation: gradient 5s ease infinite;
   width: 100%;
-  height: 100vh;
+
 }
 
 @keyframes gradient {
@@ -191,13 +194,12 @@
 
 .menuItem, .menuName {
   margin: 10px;
+  font-size: min(32px,5vw);
 }
 
 .menuItem, .menuName, .footerItem {
   font-family: "Eras Bold ITC", monospace;
-  font-size: 2em;
   text-align: center;
-  min-height: 1em !important;
   background: -webkit-linear-gradient(1deg, rgba(187,71,255,1) 65%, rgba(102,71,255,1) 85%);
   background: linear-gradient(1deg, rgba(187,71,255,1) 65%, rgba(102,71,255,1) 85%);
   background-size: 100% 200%;
@@ -237,17 +239,20 @@
 
 .intro {
   max-width: 420px;
-  font-size: 20pt;
+  max-font-size: 27px;
+  font-size: calc(10px + 0.9vw);
 }
 
 .quote, .quoteRight {
-  width: 50px;
-  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  width: 5vw;
+  height: 5vw;
 }
 
 .quoteRight {
   transform: scaleX(-1) scaleY(-1);
-  margin-top: 220px;
+  margin-top: 10vmax;
 }
 
 /* Footer.js styles */
@@ -255,8 +260,11 @@
 .footerItem {
   margin-right: 10px;
   margin-left: 10px;
+  font-size: min(32px,5vw);
 }
 
 .footerLink {
   text-decoration: none;
 }
+
+/**/

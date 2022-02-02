@@ -17,6 +17,8 @@ export class Footer extends Component {
             });
         };
 
+        const width = (this.props.mobile) ? "35" : "40";
+        const height = (this.props.mobile) ? "30" : "34";
         const mail = "mailto:stodoran@uw.edu?subject=Hey!+Lets+work+together!";
         return (
             <View style={styles.footer}>
@@ -29,7 +31,7 @@ export class Footer extends Component {
                     </a>
                 </View>
                 <TouchableOpacity onPress={scrollToTop}>
-                    <svg width="40" height="34" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width={width} height={height} viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_9_3" style={{maskType: "alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="49" height="30">
                             <g style={{mixBlendMode: "multiply"}}>
                                 <path d="M24.0417 0.301496L48.0833 24.3431L42.4264 30L24.0417 11.6152L5.6569 30L4.94542e-07 24.3431L24.0417 0.301496Z" fill="#C4C4C4"/>
