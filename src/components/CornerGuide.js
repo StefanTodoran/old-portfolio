@@ -40,7 +40,7 @@ export class CornerGuide extends Component {
     render() {
         const intro = <div><h2>Hey there!</h2><p>I'm Stefan, a computer science student at the University of Washington with a passion for UX Design and web development.</p></div>
         const projects = <div><h2>A bit about me...</h2><p>I always seek to push my boundaries, exploring all corners of computer science. Here's some of the work I'm most proud of.</p></div>
-        const show = (this.state.position < 0.1) ? intro : projects;
+        const show = (this.state.position < 0.075) ? intro : projects;
         return(
             <div className={"guideContainer"}>
                 <View style={styles.container}>

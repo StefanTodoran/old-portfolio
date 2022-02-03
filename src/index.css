@@ -20,8 +20,8 @@ code {
 }
 
 @font-face {
-  font-family: "Eras Bold ITC";
-  src: local("ErasBoldITC"),
+  font-family: "Goldplay";
+  src: local("Goldplay"),
   url("./assets/Goldplay.ttf") format("truetype");
   /*font-weight: bold;*/
 }

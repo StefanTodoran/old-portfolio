@@ -105,30 +105,53 @@
   width: 90vw;
 }
 
-.tvMobilePreview {
+.tvMobileImage {
   width: 50vw;
+  max-width: 200px;
 }
 
-.tvPreview {
-  width: 25vw;
+/*.tvPreview {*/
+/*  width: 25vw;*/
+/*  max-width: 300px;*/
+/*  padding-left: 15px;*/
+/*  flex-grow: 0;*/
+/*}*/
+
+.tvParallax {
+  width: 20vw;
   max-width: 300px;
   padding-left: 15px;
-  flex-grow: 0;
 }
 
-.lgPreview {
-  width: 50vw;
-  flex-grow: 0;
+/*.lgPreview {*/
+/*  width: 50vw;*/
+/*  flex-grow: 0;*/
+/*}*/
+
+.lgParallax {
+  width: 45vw;
+  padding-right: 15px;
 }
 
-.daPreview {
-  width: 50vw;
-  max-width: 550px;
-  flex-grow: 0;
+/*.daPreview {*/
+/*  width: 50vw;*/
+/*  max-width: 550px;*/
+/*  flex-grow: 0;*/
+/*}*/
+
+.daParallax {
+  width: 30vw;
+  padding-left: 15px;
 }
 
-.clientPreview {
+.clientPreview1 {
   width: 35vw;
+  padding-left: 20px;
+}
+
+.clientPreview2 {
+  width: 35vw;
+  padding-right: 20px;
 }
 
 .clientLogo {
@@ -141,11 +164,20 @@
   width: 20vw;
 }
 
-
 .paragraph, .intro {
   font-family: "Avenir Light", sans-serif;
   font-size: min(19px,3.5vmin);
   justify-content: center;
+}
+
+.projectTitle {
+  font-family: "Avenir Light", sans-serif;
+  font-size: 20pt;
+  text-decoration: none;
+}
+
+.projectTitle:hover {
+  font-weight: bold;
 }
 
 .logoLabel {
@@ -161,12 +193,13 @@
 }
 
 .title {
-  font-size: min(72px,12vmin);
+  /*font-size: min(72px,12vmin);*/
+  font-size: min(32px,3vmin);
 }
 
 .title {
-  font-family: "Eras Bold ITC", monospace;
-  text-align: center;
+  font-family: "Goldplay", monospace;
+  /*text-align: center;*/
   min-height: 1em !important;
   background: -webkit-linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);
   background: linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);
@@ -198,7 +231,7 @@
 }
 
 .menuItem, .menuName, .footerItem {
-  font-family: "Eras Bold ITC", monospace;
+  font-family: "Goldplay", monospace;
   text-align: center;
   background: -webkit-linear-gradient(1deg, rgba(187,71,255,1) 65%, rgba(102,71,255,1) 85%);
   background: linear-gradient(1deg, rgba(187,71,255,1) 65%, rgba(102,71,255,1) 85%);

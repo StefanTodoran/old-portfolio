@@ -15,12 +15,12 @@ export class ParallaxSection extends Component {
             );
         }
 
+        const containerStyle = (this.props.large) ? styles.containerLarge : styles.container;
         if (this.props.flipped) {
             return(
-                <View style={styles.container}>
+                <View style={containerStyle}>
                     <View style={styles.project}>
-                        <img className={this.props.imageStyle} src={this.props.image}
-                             alt={""} ref={this.props.imageRef}/>
+                        <img className={this.props.imageStyle} src={this.props.image}/>
                         <View style={styles.description}>
                             <this.props.content/>
                         </View>
@@ -29,13 +29,12 @@ export class ParallaxSection extends Component {
             );
         }
         return(
-            <View style={styles.container}>
+            <View style={containerStyle}>
                 <View style={styles.project}>
                     <View style={styles.description}>
                         <this.props.content/>
                     </View>
-                    <img className={this.props.imageStyle} src={this.props.image}
-                         alt={""} ref={this.props.imageRef}/>
+                    <img className={this.props.imageStyle} src={this.props.image}/>
                 </View>
             </View>
         );
@@ -44,7 +43,12 @@ export class ParallaxSection extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        height: "150vh",
+        height: "90vh",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    containerLarge: {
+        height: "120vh",
         alignItems: "center",
         justifyContent: "center",
     },
