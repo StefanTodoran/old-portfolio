@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bf3f0621.css",
-    "main.js": "/static/js/main.334c4172.js",
+    "main.css": "/static/css/main.892075ca.css",
+    "main.js": "/static/js/main.8d4d8452.js",
     "static/js/787.30237536.chunk.js": "/static/js/787.30237536.chunk.js",
     "static/media/technivision.gif": "/static/media/technivision.de82e853b58d625dec5c.gif",
     "static/media/datina.gif": "/static/media/datina.46784b9371e5864d3b86.gif",
@@ -18,12 +18,12 @@
     "static/media/Avenir Light.ttf": "/static/media/Avenir Light.8f47513e72894bc6169f.ttf",
     "static/media/client4.png": "/static/media/client4.3d082b18488d8403b215.png",
     "index.html": "/index.html",
-    "main.bf3f0621.css.map": "/static/css/main.bf3f0621.css.map",
-    "main.334c4172.js.map": "/static/js/main.334c4172.js.map",
+    "main.892075ca.css.map": "/static/css/main.892075ca.css.map",
+    "main.8d4d8452.js.map": "/static/js/main.8d4d8452.js.map",
     "787.30237536.chunk.js.map": "/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf3f0621.css",
-    "static/js/main.334c4172.js"
+    "static/css/main.892075ca.css",
+    "static/js/main.8d4d8452.js"
   ]
 }
