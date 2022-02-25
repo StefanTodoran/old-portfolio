@@ -10,7 +10,7 @@ export class ParallaxSection extends Component {
                 <View style={styles.mobile}>
                     <this.props.content/>
                     <br/>
-                    <img className={this.props.imageStyle} src={this.props.image} alt={""}/>
+                    <img className={this.props.imageStyle} src={this.props.image} draggable={false}/>
                 </View>
             );
         }
@@ -20,7 +20,7 @@ export class ParallaxSection extends Component {
             return(
                 <View style={containerStyle}>
                     <View style={styles.project}>
-                        <img className={this.props.imageStyle} src={this.props.image}/>
+                        <img className={this.props.imageStyle} src={this.props.image} draggable={false}/>
                         <View style={styles.description}>
                             <this.props.content/>
                         </View>
@@ -34,7 +34,7 @@ export class ParallaxSection extends Component {
                     <View style={styles.description}>
                         <this.props.content/>
                     </View>
-                    <img className={this.props.imageStyle} src={this.props.image}/>
+                    <img className={this.props.imageStyle} src={this.props.image} draggable={false}/>
                 </View>
             </View>
         );

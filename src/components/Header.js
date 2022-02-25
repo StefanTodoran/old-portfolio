@@ -3,6 +3,7 @@ import {StyleSheet} from "react-native";
 import './Components.css';
 import {View} from "react-native-web";
 import {MenuItem} from "./MenuItem";
+import resumePDF from "../assets/Resume.pdf";
 
 export class Header extends Component {
     render() {
@@ -13,8 +14,7 @@ export class Header extends Component {
                     <MenuItem text={"FREELANCE"} onPress={this.props.freelanceScroll} styleClass={"menuItem"}/>
                     <MenuItem text={"PROJECTS"} onPress={this.props.projectsScroll} styleClass={"menuItem"}/>
                 </View>
-                {(!this.props.mobile) &&
-                <View style={{flexDirection: "row"}}>
+                {!this.props.mobile && <View style={{flexDirection: "row"}}>
                     <div className={"menuName"}>STEFAN TODORAN</div>
                 </View>}
             </View>

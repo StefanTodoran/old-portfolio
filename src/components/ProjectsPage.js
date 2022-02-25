@@ -14,39 +14,52 @@ export class ProjectsPage extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.doParallax);
+        window.addEventListener('scroll', this.handleScroll);
         this.setState({
             middle: document.documentElement.clientHeight/2,
         })
     }
 
-    doParallax = () => {
-        const tvParallax = document.querySelector('.tvParallax');
-        const tvDesc = document.querySelector('.tvDesc');
-        let tvDifference = this.state.middle - this.getMiddle(tvDesc.getBoundingClientRect());
-        tvParallax.style.transform = `translateY(${tvDifference * -.5}px)`
+    handleScroll = () => {
+        if (!this.props.mobile) {
+            this.handleParallax('.tvParallax','.tvDesc');
+            this.handleParallax('.lgParallax','.lgDesc');
+            this.handleParallax('.daParallax','.daDesc');
 
-        const lgParallax = document.querySelector('.lgParallax');
-        const lgDesc = document.querySelector('.lgDesc');
-        let lgDifference = this.state.middle - this.getMiddle(lgDesc.getBoundingClientRect());
-        lgParallax.style.transform = `translateY(${lgDifference * -.5}px)`
+            this.textAnimate('.tvDesc');
+            this.textAnimate('.lgDesc');
+            this.textAnimate('.daDesc');
+        }
+    }
 
-        const daParallax = document.querySelector('.daParallax');
-        const daDesc = document.querySelector('.daDesc');
-        let daDifference = this.state.middle - this.getMiddle(daDesc.getBoundingClientRect());
-        daParallax.style.transform = `translateY(${daDifference * -.5}px)`
+    handleParallax(image, description) {
+        const img = document.querySelector(image);
+        const desc = document.querySelector(description);
+        let diff = this.state.middle - this.getMiddle(desc.getBoundingClientRect());
+        img.style.transform = `translateY(${diff * -.5}px)`;
     }
 
     getMiddle(element) {
         return ((element.top + element.bottom) / 2);
     }
 
+    textAnimate(selector) {
+        const text = document.querySelector(selector);
+        let dist = (this.state.middle * 1.9) - this.getMiddle(text.getBoundingClientRect());
+        if (dist > 0) {
+            text.classList.add("activeDesc");
+        } else {
+            text.classList.remove("activeDesc");
+        }
+    }
+
     render() {
         const itemOneContent = () => {
-            return(
-                <div className={"tvDesc"}>
+            const descName = (this.props.mobile) ? '' : 'tvDesc';
+            return( // {"\u2B9A"} = &#11162; = ⮚
+                <div className={descName}>
                     <a href={"https://www.youtube.com/watch?v=tSOshI3OD_Q"} target="_blank"
-                       className={"title"}>Technivision ⮚</a>
+                       className={"title"}>Technivision</a>
                     <div className={"paragraph"}>
                         A “personal trainer in your pocket” hybrid mobile app that aims to help users achieve
                         safer, more effective workouts. By utilizing computer vision and pose estimation, Technivision
@@ -56,10 +69,11 @@ export class ProjectsPage extends Component {
             )
         }
         const itemTwoContent = () => {
+            const descName = (this.props.mobile) ? '' : 'lgDesc';
             return(
-                <div className={"lgDesc"}>
+                <div className={descName}>
                     <a href={"https://www.youtube.com/watch?v=HCLEnS05A-s"} target="_blank"
-                       className={"title"}>Linguini ⮚</a>
+                       className={"title"}>Linguini</a>
                     <div className={"paragraph"}>
                         A light-weight browser extension designed to help you translate words and phrases at the press
                         of a button. Its sleek, low-profile interface seamlessly integrates into chrome; you won't notice
@@ -70,10 +84,11 @@ export class ProjectsPage extends Component {
             )
         }
         const itemThreeContent = () => {
+            const descName = (this.props.mobile) ? '' : 'daDesc';
             return(
-                <div className={"daDesc"}>
+                <div className={descName}>
                     <a href={"https://www.facebook.com/datinaseattle"} target="_blank"
-                       className={"title"}>Datina ⮚</a>
+                       className={"title"}>Datina</a>
                     <div className={"paragraph"}>
                         ...is a Romanian folkloric ensemble based in Seattle, Washington composed entirely of volunteers.
                         As I managed the audio at performances and practices, I grew to be dissatisfied with the existing
@@ -86,17 +101,19 @@ export class ProjectsPage extends Component {
         }
 
         const tvStyle = (this.props.mobile) ? "tvMobileImage" : "tvParallax";
-        const lgStyle = (this.props.mobile) ? "mobileImage" : "lgParallax";
-        const daStyle = (this.props.mobile) ? "mobileImage" : "daParallax";
+        const lgStyle = (this.props.mobile) ? "lgMobileImage" : "lgParallax";
+        const daStyle = (this.props.mobile) ? "daMobileImage" : "daParallax";
 
         return(
             <View style={styles.container} ref={this.props.refProp}>
-                <ParallaxSection image={technivision} imageStyle={tvStyle}
-                                 content={itemOneContent} mobile={this.props.mobile}/>
-                <ParallaxSection image={linguini} imageStyle={lgStyle}
-                                 content={itemTwoContent} mobile={this.props.mobile} flipped={true}/>
-                <ParallaxSection image={datina} imageStyle={daStyle}
-                                 content={itemThreeContent} mobile={this.props.mobile}/>
+                <div className={"wrapper"}>
+                    <ParallaxSection image={technivision} imageStyle={tvStyle}
+                                     content={itemOneContent} mobile={this.props.mobile}/>
+                    <ParallaxSection image={linguini} imageStyle={lgStyle}
+                                     content={itemTwoContent} mobile={this.props.mobile} flipped={true}/>
+                    <ParallaxSection image={datina} imageStyle={daStyle}
+                                     content={itemThreeContent} mobile={this.props.mobile}/>
+                </div>
             </View>
         );
     }

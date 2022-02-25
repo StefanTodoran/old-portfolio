@@ -8,6 +8,9 @@ import {FreelancePage} from "./components/FreelancePage";
 import {Footer} from "./components/Footer";
 import {ScrollAnim} from "./components/ScrollAnim";
 import {Header} from "./components/Header";
+import {View} from "react-native-web";
+import {IntroPage} from "./components/IntroPage";
+import {AboutPage} from "./components/AboutPage";
 
 export class MainApp extends Component {
     constructor(props) {
@@ -43,21 +46,46 @@ export class MainApp extends Component {
         }
     }
 
+    setEffects = (active) => {
+        const bg = document.querySelector('.background');
+        const grain = document.querySelector('.grain');
+        const inner = document.querySelector('.filmScratchInner');
+        const outer = document.querySelector('.filmScratchOuter');
+
+        if (active) {
+            bg.classList.add('activeBackground');
+            grain.classList.add('activeGrain');
+            inner.classList.add('activeScratchInner');
+            outer.classList.add('activeScratchOuter');
+        } else {
+            bg.classList.remove('activeBackground');
+            grain.classList.remove('activeGrain');
+            inner.classList.remove('activeScratchInner');
+            outer.classList.remove('activeScratchOuter');
+        }
+    }
+
     render() {
         const mobile = this.props.mobile || this.state.tallMode;
         return (
-            <div className={"background"}>
-                <ScrollAnim/>
-                <ScrollAnim/>
+            <div>
+                <div className={"background activeBackground"}/>
+                <div className={"grain activeGrain"}/>
+                <div className={"filmScratchInner activeScratchInner"}/>
+                <div className={"filmScratchOuter activeScratchOuter"}/>
+                <IntroPage mobile={mobile}/>
+                <AboutPage mobile={mobile} effectsCallback={this.setEffects}/>
+                {/*<ScrollAnim/>*/}
 
                 <CornerGuide mobile={mobile}/>
                 <FreelancePage mobile={mobile} refProp={this.freelanceRef}/>
                 <ProjectsPage mobile={mobile} refProp={this.projectsRef}/>
 
-                <br/>
+                <View style={styles.filler}/>
+
+                <Footer/>
                 <Header freelanceScroll={this.freelanceScroll} mobile={mobile}
                         projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
-                <Footer mobile={mobile}/>
             </div>
         );
     }
@@ -79,7 +107,6 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     filler: {
-        width: 5,
-        height: 1200,
+        height: "15vh",
     },
 });

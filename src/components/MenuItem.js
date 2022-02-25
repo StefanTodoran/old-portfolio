@@ -8,7 +8,6 @@ export class MenuItem extends Component {
             <TouchableOpacity onPress={this.props.onPress}>
                 <div className={this.props.styleClass}>{this.props.text}</div>
             </TouchableOpacity>
-
         );
     }
 }
