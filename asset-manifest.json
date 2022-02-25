@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3a30e331.css",
-    "main.js": "/static/js/main.1eb6d0e5.js",
+    "main.js": "/static/js/main.c35d71f3.js",
     "static/js/787.30237536.chunk.js": "/static/js/787.30237536.chunk.js",
     "static/media/technivision.gif": "/static/media/technivision.de82e853b58d625dec5c.gif",
     "static/media/datina.gif": "/static/media/datina.46784b9371e5864d3b86.gif",
@@ -12,18 +12,18 @@
     "static/media/iha_preview_alt.png": "/static/media/iha_preview_alt.91b32c3e310b96cc85fa.png",
     "static/media/siwh_preview_1.png": "/static/media/siwh_preview_1.ef7b2c8ca5baeee8bcd4.png",
     "static/media/Goldplay.ttf": "/static/media/Goldplay.c4107a2a03ee31d3dda4.ttf",
-    "static/media/Resume.pdf": "/static/media/Resume.d7bec9b1d8184bc3de54.pdf",
+    "static/media/Resume.pdf": "/static/media/Resume.beaab9f7a38eff01450a.pdf",
     "static/media/Bell MT.ttf": "/static/media/Bell MT.c830d6f7513d78e40b5b.ttf",
     "static/media/linguini.png": "/static/media/linguini.18362c7affc6a3a31d64.png",
     "static/media/Avenir Light.ttf": "/static/media/Avenir Light.8f47513e72894bc6169f.ttf",
     "static/media/client4.png": "/static/media/client4.3d082b18488d8403b215.png",
     "index.html": "/index.html",
     "main.3a30e331.css.map": "/static/css/main.3a30e331.css.map",
-    "main.1eb6d0e5.js.map": "/static/js/main.1eb6d0e5.js.map",
+    "main.c35d71f3.js.map": "/static/js/main.c35d71f3.js.map",
     "787.30237536.chunk.js.map": "/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3a30e331.css",
-    "static/js/main.1eb6d0e5.js"
+    "static/js/main.c35d71f3.js"
   ]
 }
