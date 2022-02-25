@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a30e331.css",
+    "main.css": "/static/css/main.8c5aa97e.css",
     "main.js": "/static/js/main.c35d71f3.js",
     "static/js/787.30237536.chunk.js": "/static/js/787.30237536.chunk.js",
     "static/media/technivision.gif": "/static/media/technivision.de82e853b58d625dec5c.gif",
@@ -18,12 +18,12 @@
     "static/media/Avenir Light.ttf": "/static/media/Avenir Light.8f47513e72894bc6169f.ttf",
     "static/media/client4.png": "/static/media/client4.3d082b18488d8403b215.png",
     "index.html": "/index.html",
-    "main.3a30e331.css.map": "/static/css/main.3a30e331.css.map",
+    "main.8c5aa97e.css.map": "/static/css/main.8c5aa97e.css.map",
     "main.c35d71f3.js.map": "/static/js/main.c35d71f3.js.map",
     "787.30237536.chunk.js.map": "/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a30e331.css",
+    "static/css/main.8c5aa97e.css",
     "static/js/main.c35d71f3.js"
   ]
 }
