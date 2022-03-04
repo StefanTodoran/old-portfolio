@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.99896261.css",
-    "main.js": "/static/js/main.a4e7c122.js",
+    "main.css": "/static/css/main.762e2402.css",
+    "main.js": "/static/js/main.ca32a14e.js",
     "static/js/787.30237536.chunk.js": "/static/js/787.30237536.chunk.js",
     "static/media/technivision.gif": "/static/media/technivision.de82e853b58d625dec5c.gif",
     "static/media/datina.gif": "/static/media/datina.46784b9371e5864d3b86.gif",
-    "static/media/portrait.png": "/static/media/portrait.87ffcbec1662d7f4f6ce.png",
     "static/media/client1.png": "/static/media/client1.03d063f894909a5db0d4.png",
     "static/media/client3.png": "/static/media/client3.23bd24464826c4241b13.png",
     "static/media/iha_preview_alt.png": "/static/media/iha_preview_alt.91b32c3e310b96cc85fa.png",
+    "static/media/portrait.png": "/static/media/portrait.9616c51239e73c86526d.png",
     "static/media/siwh_preview_1.png": "/static/media/siwh_preview_1.ef7b2c8ca5baeee8bcd4.png",
     "static/media/client2.png": "/static/media/client2.73f1e830d68c911e015b.png",
-    "static/media/Goldplay.ttf": "/static/media/Goldplay.c4107a2a03ee31d3dda4.ttf",
     "static/media/Resume.pdf": "/static/media/Resume.beaab9f7a38eff01450a.pdf",
-    "static/media/Bell MT.ttf": "/static/media/Bell MT.c830d6f7513d78e40b5b.ttf",
     "static/media/linguini.png": "/static/media/linguini.18362c7affc6a3a31d64.png",
-    "static/media/Avenir Light.ttf": "/static/media/Avenir Light.8f47513e72894bc6169f.ttf",
+    "static/media/NixieOne.otf": "/static/media/NixieOne.9159ac93a534b8d32340.otf",
+    "static/media/FranchiseFilled.ttf": "/static/media/FranchiseFilled.28808ba5190d3ddf1292.ttf",
+    "static/media/Franchise.ttf": "/static/media/Franchise.412b5a60dbe9ccf19599.ttf",
     "static/media/client4.png": "/static/media/client4.2940ea94e14fb409369a.png",
     "index.html": "/index.html",
-    "main.99896261.css.map": "/static/css/main.99896261.css.map",
-    "main.a4e7c122.js.map": "/static/js/main.a4e7c122.js.map",
+    "main.762e2402.css.map": "/static/css/main.762e2402.css.map",
+    "main.ca32a14e.js.map": "/static/js/main.ca32a14e.js.map",
     "787.30237536.chunk.js.map": "/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99896261.css",
-    "static/js/main.a4e7c122.js"
+    "static/css/main.762e2402.css",
+    "static/js/main.ca32a14e.js"
   ]
 }
