@@ -95,10 +95,10 @@ export class FreelancePage extends Component {
 
         return(
             <View style={styles.container} ref={this.props.refProp}>
-                <ParallaxSection image={preview3} imageStyle={imageOneStyle} large={true}
+                <ParallaxSection image={preview3} imageStyle={imageOneStyle}
                                  content={itemOneContent} mobile={this.props.mobile}/>
                 <br/><LogoBand mobile={this.props.mobile}/><br/>
-                <ParallaxSection image={preview1} imageStyle={imageTwoStyle} flipped={true} large={true}
+                <ParallaxSection image={preview1} imageStyle={imageTwoStyle} flipped={true}
                                  content={itemTwoContent} mobile={this.props.mobile}/>
             </View>
         );

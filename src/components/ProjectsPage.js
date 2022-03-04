@@ -59,7 +59,7 @@ export class ProjectsPage extends Component {
             return( // {"\u2B9A"} = &#11162; = ⮚
                 <div className={descName}>
                     <a href={"https://www.youtube.com/watch?v=tSOshI3OD_Q"} target="_blank"
-                       className={"title"}>Technivision</a>
+                       className={"title clickableTitle"}>Technivision</a>
                     <div className={"paragraph"}>
                         A “personal trainer in your pocket” hybrid mobile app that aims to help users achieve
                         safer, more effective workouts. By utilizing computer vision and pose estimation, Technivision
@@ -73,7 +73,7 @@ export class ProjectsPage extends Component {
             return(
                 <div className={descName}>
                     <a href={"https://www.youtube.com/watch?v=HCLEnS05A-s"} target="_blank"
-                       className={"title"}>Linguini</a>
+                       className={"title clickableTitle"}>Linguini</a>
                     <div className={"paragraph"}>
                         A light-weight browser extension designed to help you translate words and phrases at the press
                         of a button. Its sleek, low-profile interface seamlessly integrates into chrome; you won't notice
@@ -88,7 +88,7 @@ export class ProjectsPage extends Component {
             return(
                 <div className={descName}>
                     <a href={"https://www.facebook.com/datinaseattle"} target="_blank"
-                       className={"title"}>Datina</a>
+                       className={"title clickableTitle"}>Datina</a>
                     <div className={"paragraph"}>
                         ...is a Romanian folkloric ensemble based in Seattle, Washington composed entirely of volunteers.
                         As I managed the audio at performances and practices, I grew to be dissatisfied with the existing

@@ -12,7 +12,7 @@ export class LogoBand extends Component {
     render() {
         if (this.props.mobile) {
             return(
-                <View>
+                <View style={styles.containerMobile}>
                     <View style={styles.logosTitle}>
                         <div className={"lineLeft"}/>
                         <div className={"logoLabel"}>RECENT CLIENTS</div>
@@ -32,7 +32,7 @@ export class LogoBand extends Component {
         }
 
         return(
-            <View>
+            <View style={styles.container}>
                 <View style={styles.logosTitle}>
                     <div className={"lineLeft"}/>
                     <div className={"logoLabel"}>RECENT CLIENTS</div>
@@ -63,5 +63,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         paddingHorizontal: 10,
+    },
+    container: {
+        marginVertical: "20vh",
+    },
+    containerMobile: {
+        marginVertical: "5vh",
     },
 });

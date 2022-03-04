@@ -13,15 +13,13 @@ code {
 }
 
 @font-face {
-  font-family: "Avenir Light";
-  src: local("Avenir Light"),
-  url("./assets/Avenir Light.ttf") format("truetype");
-  /*font-weight: bold;*/
+  font-family: "Nixie One";
+  src: local("Nixie One"),
+  url("./assets/NixieOne.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "Goldplay";
-  src: local("Goldplay"),
-  url("./assets/Goldplay.ttf") format("truetype");
-  /*font-weight: bold;*/
+  font-family: "Franchise";
+  src: local("Franchise"),
+  url("./assets/Franchise.ttf") format("truetype");
 }

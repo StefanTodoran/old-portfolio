@@ -31,16 +31,29 @@ export class CornerGuide extends Component {
 
         const scrolled = winScroll / height;
 
+        console.log(scrolled)
         this.setState({
             position: scrolled,
         });
+        //
+        // if (scrolled > 0.4) {
+        //     this.props.setHeader(true);
+        // } else {
+        //     this.props.setHeader(false);
+        // }
     }
 
 
     render() {
+        // const intro = <div><h2>Hey there!</h2><p>I'm Stefan, a computer science student at the University of Washington with a passion for AI, UX Design and web development.</p></div>
+        // const about = <div><h2>A bit about me...</h2><p>I always seek to push my boundaries, exploring all corners of computer science. I strive to bring my full energy and creativity to every project and team I am a part of.</p></div>
+        // const projects = <div><h2>Alright, enough blabbing.</h2><p>Let's get to what you're here for. The rest of this 'movie' is a showcase some of the work I'm most proud of.</p></div>
+        // const show = (this.state.position < 0.08) ? intro : (this.state.position < 0.16) ? about : projects;
+
         const intro = <div><h2>Hey there!</h2><p>I'm Stefan, a computer science student at the University of Washington with a passion for AI, UX Design and web development.</p></div>
-        const projects = <div><h2>A bit about me...</h2><p>I always seek to push my boundaries, exploring all corners of computer science. Here's some of the work I'm most proud of.</p></div>
-        const show = (this.state.position < 0.075) ? intro : projects;
+        const about = <div><h2>A bit about me...</h2><p>I always seek to push my boundaries, exploring all corners of computer science. Here's some of the work I'm most proud of.</p></div>
+        const show = (this.state.position < 0.06) ? intro : about;
+
         return(
             <div className={"guideContainer"}>
                 <View style={styles.container}>
@@ -57,6 +70,7 @@ export class CornerGuide extends Component {
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row-reverse",
+        // justifyContent: "center",
         alignItems: "center",
         flex: 1,
     },

@@ -6,11 +6,11 @@ import './App.css';
 import {ProjectsPage} from "./components/ProjectsPage";
 import {FreelancePage} from "./components/FreelancePage";
 import {Footer} from "./components/Footer";
-import {ScrollAnim} from "./components/ScrollAnim";
 import {Header} from "./components/Header";
 import {View} from "react-native-web";
 import {IntroPage} from "./components/IntroPage";
 import {AboutPage} from "./components/AboutPage";
+import {IntroAnim} from "./components/IntroAnim";
 
 export class MainApp extends Component {
     constructor(props) {
@@ -51,17 +51,20 @@ export class MainApp extends Component {
         const grain = document.querySelector('.grain');
         const inner = document.querySelector('.filmScratchInner');
         const outer = document.querySelector('.filmScratchOuter');
+        const stutter = document.querySelector('.wholeView');
 
         if (active) {
             bg.classList.add('activeBackground');
             grain.classList.add('activeGrain');
             inner.classList.add('activeScratchInner');
             outer.classList.add('activeScratchOuter');
+            stutter.classList.add('wholeViewActive');
         } else {
             bg.classList.remove('activeBackground');
             grain.classList.remove('activeGrain');
             inner.classList.remove('activeScratchInner');
             outer.classList.remove('activeScratchOuter');
+            stutter.classList.remove('wholeViewActive');
         }
     }
 
@@ -69,21 +72,22 @@ export class MainApp extends Component {
         const mobile = this.props.mobile || this.state.tallMode;
         return (
             <div>
-                <div className={"background activeBackground"}/>
-                <div className={"grain activeGrain"}/>
+                {/*<IntroAnim mobile={mobile}/>*/}
+
                 <div className={"filmScratchInner activeScratchInner"}/>
                 <div className={"filmScratchOuter activeScratchOuter"}/>
-                <IntroPage mobile={mobile}/>
-                <AboutPage mobile={mobile} effectsCallback={this.setEffects}/>
-                {/*<ScrollAnim/>*/}
+                <div className={"background activeBackground"}/>
+                <div className={"grain activeGrain"}/>
+                <div className={"wholeView wholeViewActive"}>
+                    <IntroPage mobile={mobile}/>
+                    <AboutPage mobile={mobile} effectsCallback={this.setEffects}/>
 
-                <CornerGuide mobile={mobile}/>
-                <FreelancePage mobile={mobile} refProp={this.freelanceRef}/>
-                <ProjectsPage mobile={mobile} refProp={this.projectsRef}/>
+                    <CornerGuide mobile={mobile}/>
+                    <FreelancePage mobile={mobile} refProp={this.freelanceRef}/>
+                    <ProjectsPage mobile={mobile} refProp={this.projectsRef}/>
 
-                <View style={styles.filler}/>
-
-                <Footer/>
+                    <Footer mobile={mobile}/>
+                </div>
                 <Header freelanceScroll={this.freelanceScroll} mobile={mobile}
                         projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
             </div>
