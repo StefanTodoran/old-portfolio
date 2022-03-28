@@ -1,51 +1,130 @@
 .fullScreenContainer {
     overflow: hidden;
-    height: 100vh;
+    height: 100vh; /* with 100% here, pulse anim causes scroll bar to appear and disappear */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
 }
 
 .playButton {
-    animation: pulse 4s infinite;
+    animation: pulse 3s infinite;
+}
+
+.playButton:hover {
+    opacity: 0.75;
 }
 
 @keyframes pulse {
     0% {transform: scale(1);}
-    40% {transform: scale(1);}
-    42.5% {transform: scale(1.2);}
-    45% {transform: scale(0.9);}
-    47.5% {transform: scale(1.2);}
-    50% {transform: scale(0.9);}
-    52.5% {transform: scale(1);}
+    30% {transform: scale(1);}
+    33% {transform: scale(1.2);}
+    36% {transform: scale(0.9);}
+    39% {transform: scale(1.2);}
+    42% {transform: scale(0.9);}
+    45% {transform: scale(1);}
     100% {transform: scale(1);}
 }
 
-.guideContainer {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    animation: guide 10s;
+.countdownNumber {
+    font-size: max(30vmin, 100px);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50.5%);
+    -ms-transform: translate(-50%, -50.5%);
+    transform: translate(-50%, -50.5%);
 }
 
-@keyframes guide {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
+.horizontalLine {
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    top: 50%;
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hint {
-    animation: hintAnim 10s;
-    opacity: 0;
+.verticalLine {
+    width: 3px;
+    height: 100%;
+
+    position: absolute;
+    left: 50%;
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-@keyframes hintAnim {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    20% { opacity: 1; }
-    30% { opacity: 0; }
+.circleContainer {
+    height: 100vh;
+    width: 100vw;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
+.spinner {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-dasharray: 1 3200;
+    r: 500;
+    stroke-width: 1000;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    animation: linear rotate 1s infinite;
+}
+
+@keyframes rotate {
+    100% { stroke-dasharray: 3200 0; }
+}
+
+.outerCircle, .innerCircle {
+    border: 5px solid lightgrey;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.outerCircle {
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.innerCircle {
+    width: 70vmin;
+    height: 70vmin;
+}
+
+.wholeView {
+    height: 100vh;
+}
+
+.full {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*.edgeFade {*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 55%, rgb(0, 0, 0) 95%);*/
+/*}*/

@@ -7,7 +7,6 @@ import {ProjectsPage} from "./components/ProjectsPage";
 import {FreelancePage} from "./components/FreelancePage";
 import {Footer} from "./components/Footer";
 import {Header} from "./components/Header";
-import {View} from "react-native-web";
 import {IntroPage} from "./components/IntroPage";
 import {AboutPage} from "./components/AboutPage";
 import {IntroAnim} from "./components/IntroAnim";
@@ -24,6 +23,8 @@ export class MainApp extends Component {
         tallMode: false,
         // tallMode handles resizing for the desktop site. Mobile is always in
         // tall mode, while desktop switches based on the window width.
+
+        introFinished: false,
     }
 
     componentDidMount() {
@@ -47,6 +48,7 @@ export class MainApp extends Component {
     }
 
     setEffects = (active) => {
+        const spots = document.querySelector('.filmSpots');
         const bg = document.querySelector('.background');
         const grain = document.querySelector('.grain');
         const inner = document.querySelector('.filmScratchInner');
@@ -54,12 +56,14 @@ export class MainApp extends Component {
         const stutter = document.querySelector('.wholeView');
 
         if (active) {
+            spots.classList.add('activeFilmSpots');
             bg.classList.add('activeBackground');
             grain.classList.add('activeGrain');
             inner.classList.add('activeScratchInner');
             outer.classList.add('activeScratchOuter');
             stutter.classList.add('wholeViewActive');
         } else {
+            spots.classList.remove('activeFilmSpots');
             bg.classList.remove('activeBackground');
             grain.classList.remove('activeGrain');
             inner.classList.remove('activeScratchInner');
@@ -68,28 +72,39 @@ export class MainApp extends Component {
         }
     }
 
+    endIntro = () => {
+        this.setState({introFinished: true});
+    }
+
     render() {
         const mobile = this.props.mobile || this.state.tallMode;
         return (
             <div>
-                {/*<IntroAnim mobile={mobile}/>*/}
+                {!this.state.introFinished && <IntroAnim endIntroCallback={this.endIntro}/>}
 
-                <div className={"filmScratchInner activeScratchInner"}/>
-                <div className={"filmScratchOuter activeScratchOuter"}/>
-                <div className={"background activeBackground"}/>
-                <div className={"grain activeGrain"}/>
-                <div className={"wholeView wholeViewActive"}>
-                    <IntroPage mobile={mobile}/>
-                    <AboutPage mobile={mobile} effectsCallback={this.setEffects}/>
+                {this.state.introFinished && <div>
+                    <div className={"filmSpots activeFilmSpots"}/>
+                    <div className={"filmScratchInner activeScratchInner"}/>
+                    <div className={"filmScratchOuter activeScratchOuter"}/>
+                    <div className={"background activeBackground"}/>
+                    <div className={"grain activeGrain"}/>
+                    <div className={"wholeView wholeViewActive"}>
+                        <div  className={"fadeInContainer"}>
+                            <IntroPage mobile={mobile}/>
+                            <AboutPage mobile={mobile} effectsCallback={this.setEffects}/>
 
-                    <CornerGuide mobile={mobile}/>
-                    <FreelancePage mobile={mobile} refProp={this.freelanceRef}/>
-                    <ProjectsPage mobile={mobile} refProp={this.projectsRef}/>
+                            <CornerGuide mobile={mobile}/>
+                            <FreelancePage mobile={mobile} refProp={this.freelanceRef}/>
+                            <ProjectsPage mobile={mobile} refProp={this.projectsRef}/>
 
-                    <Footer mobile={mobile}/>
-                </div>
-                <Header freelanceScroll={this.freelanceScroll} mobile={mobile}
-                        projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
+                            <Footer mobile={mobile}/>
+                        </div>
+                    </div>
+                    <div className={"fadeInContainer"}>
+                        <Header freelanceScroll={this.freelanceScroll} mobile={mobile}
+                                projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
+                    </div>
+                </div>}
             </div>
         );
     }

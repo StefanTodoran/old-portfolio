@@ -31,7 +31,6 @@ export class CornerGuide extends Component {
 
         const scrolled = winScroll / height;
 
-        console.log(scrolled)
         this.setState({
             position: scrolled,
         });

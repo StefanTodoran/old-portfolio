@@ -18,8 +18,8 @@ export class HoverImage extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        width: "10vw",
-        height: "10vw",
+        width: "max(10vw, 150px)",
+        height: "max(10vw, 150px)",
         justifyContent: "center",
         marginRight: "10px",
         marginLeft: "10px",

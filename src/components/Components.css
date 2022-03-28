@@ -1,92 +1,40 @@
+/* Animation for three arrows svg graphic */
+
 #topArrow {
   -webkit-animation: fade 2.5s infinite;
   animation: fade 2.5s infinite;
 }
 
 #middleArrow {
-  -webkit-animation: fadeDelayOne 2.5s infinite;
-  animation: fadeDelayOne 2.5s infinite;
+  -webkit-animation: fade 2.5s infinite;
+  animation: fade 2.5s infinite;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  opacity: 0;
 }
 
 #bottomArrow {
-  -webkit-animation: fadeDelayTwo 2.5s infinite;
-  animation: fadeDelayTwo 2.5s infinite;
+  -webkit-animation: fade 2.5s infinite;
+  animation: fade 2.5s infinite;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  opacity: 0;
 }
 
 @keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  16% {
-    opacity: 1;
-  }
-  32% {
-    opacity: 1;
-  }
-  48% {
-    opacity: 1;
-  }
-  68% {
-    opacity: 0;
-  }
-  84% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  16% { opacity: 1; }
+  32% { opacity: 1; }
+  48% { opacity: 1; }
+  68% { opacity: 0; }
+  84% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-@keyframes fadeDelayOne {
-  0% {
-    opacity: 0;
-  }
-  16% {
-    opacity: 0;
-  }
-  32% {
-    opacity: 1;
-  }
-  48% {
-    opacity: 1;
-  }
-  68% {
-    opacity: 1;
-  }
-  84% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
-@keyframes fadeDelayTwo {
-  0% {
-    opacity: 0;
-  }
-  16% {
-    opacity: 0;
-  }
-  32% {
-    opacity: 0;
-  }
-  48% {
-    opacity: 1;
-  }
-  68% {
-    opacity: 1;
-  }
-  84% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+/* ===== ProjectsPage.js & FreelancePage.js styles ===== */
 
-/* ProjectsPage.js & FreelancePage.js styles */
-
+/* client logo band lines */
 .lineLeft, .lineRight, .longLine {
   height: 1px;
   background-color: lightgray;
@@ -101,49 +49,9 @@
   margin-right: 10%;
 }
 
-.mobileImage {
+/* project and freelance image sizes */
+.mobileClientPreview {
   width: 80vw;
-}
-
-.tvMobileImage {
-  width: 50vw;
-  max-width: 200px;
-}
-
-.tvParallax {
-  width: 20vw;
-  max-width: 300px;
-  padding-left: 15px;
-}
-
-.wrapper {
-  /*perspective: 10px;*/
-  /*transform-style: preserve-3d;*/
-}
-
-/*.tvParallax {*/
-/*  width: 20vw;*/
-/*  max-width: 300px;*/
-/*  padding-left: 15px;*/
-/*  transform: translateZ(-10px);*/
-/*}*/
-
-.lgMobileImage {
-  width: 90vw;
-}
-
-.lgParallax {
-  width: 45vw;
-  padding-right: 15px;
-}
-
-.daMobileImage {
-  width: 75vw;
-}
-
-.daParallax {
-  width: 30vw;
-  padding-left: 15px;
 }
 
 .clientPreview1 {
@@ -156,26 +64,57 @@
   padding-right: 15px;
 }
 
+/* technivision preview */
+.tvMobileImage {
+  width: 50vw;
+  max-width: 200px;
+}
+
+.tvParallax {
+  width: 20vw;
+  max-width: 300px;
+  padding-left: 15px;
+}
+
+/* linguini preview */
+.lgMobileImage {
+  width: 90vw;
+}
+
+.lgParallax {
+  width: 45vw;
+  padding-right: 15px;
+}
+
+/* datina preview */
+.daMobileImage {
+  width: 75vw;
+}
+
+.daParallax {
+  width: 30vw;
+  padding-left: 15px;
+}
+
+/* client logo image sizing */
 .clientLogo {
-  width: 10vw;
+  width: max(10vw, 150px);
 }
 
 .mobileLogo {
   width: 20vw;
 }
 
-.paragraph, .intro, .hoverText {
-  font-family: "Nixie One", serif;
-  font-size: min(19px, 3.5vmin);
-  justify-content: center;
-}
+/* = project and freelance description animation = */
 
+/* left side paragraphs */
 .tvDesc, .daDesc, .firstDesc {
   transform: translateX(-100px);
   opacity: 0;
   transition: 0.5s all ease;
 }
 
+/* right side paragraphs */
 .lgDesc, .secondDesc {
   transform: translateX(100px);
   opacity: 0;
@@ -187,13 +126,21 @@
   opacity: 1;
 }
 
+/* === */
+
 .noUnderlineLink {
   text-decoration: none;
 }
 
+/* = various text styles = */
+
+.paragraph, .intro, .hoverText {
+  font-family: "Nixie One", serif;
+  font-size: min(19px, 3.5vmin);
+  justify-content: center;
+}
+
 .logoLabel {
-  /*font-family: "Avenir Light", sans-serif;*/
-  /*font-size: 14pt;*/
   font-family: "Franchise", serif;
   font-size: min(32px, 4vmin);
   justify-content: center;
@@ -205,25 +152,28 @@
   text-align: center;
 }
 
-.title {
-  font-size: min(52px,6vmin);
-  /*font-size: min(32px,3vmin); !* Good for goldplay *!*/
+.filledTitle {
+  filter:
+    drop-shadow(-6px 0px 2px white)
+    drop-shadow(-7px 0px 1px white)
 }
 
-.title {
+.title, .filledTitle {
   font-family: "Franchise", monospace;
-  min-height: 1em !important;
+  font-size: min(52px, 6vmin);
   /*background: -webkit-linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);*/
   /*background: linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);*/
-  background: -webkit-linear-gradient(1deg, rgb(255, 192, 92) 40%, rgb(255, 142, 71) 60%);
-  background: linear-gradient(1deg, rgb(255, 192, 92) 40%, rgb(255, 142, 71) 60%);
+  background: -webkit-linear-gradient(1deg, var(--light-color) 40%, var(--dark-color) 60%);
+  background: linear-gradient(1deg, var(--light-color) 40%, var(--dark-color) 60%);
   background-size: 100% 200%;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
+
+  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+
   animation: gradient 5s ease infinite;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 @keyframes gradient {
@@ -238,34 +188,7 @@
   }
 }
 
-.navbarItem, .menuName {
-  margin: 10px;
-  margin-right: 12px;
-  font-size: max(min(48px,8vw),32px);
-}
-
-.menuItem {
-  margin: 10px;
-  margin-right: 12px;
-  /*font-size: max(min(32px,2vw),18px); !* Good for goldplay *!*/
-  font-size: max(min(36px,6vw),24px);
-}
-
-.menuItem, .menuName, .footerItem, .navbarItem {
-  font-family: "Franchise", monospace;
-  text-align: center;
-  /*background: -webkit-linear-gradient(1deg, rgba(187,71,255,1) 65%, rgba(102,71,255,1) 85%);*/
-  /*background: linear-gradient(1deg, rgba(187,71,255,1) 65%, rgba(102,71,255,1) 85%);*/
-  background: -webkit-linear-gradient(1deg, rgb(255, 192, 92) 45%, rgb(255, 142, 71) 85%);
-  background: linear-gradient(1deg, rgb(255, 192, 92) 45%, rgb(255, 142, 71) 85%);
-  background-size: 100% 200%;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.menuItem, .footerItem, .navbarItem, .clickableTitle {
+.clickableTitle {
   border-width: 0px;
   border-bottom-width: 1px;
   border-radius: 3px;
@@ -274,10 +197,24 @@
   cursor: pointer;
 }
 
-.menuItem:hover, .footerItem:hover, .navbarItem:hover, .clickableTitle:hover {
+.clickableTitle:hover {
   transform: scale(0.99);
   /*border-color: rgba(187,71,255,1);*/
-  border-color: rgb(255, 192, 92);
+  border-color: var(--light-color);
+}
+
+.navbarItem, .menuName, .menuItem {
+  margin: 10px;
+  margin-right: 12px;
+}
+
+.navbarItem, .menuName {
+  font-size: max(min(48px,8vw),32px);
+}
+
+.menuItem {
+  font-size: max(min(36px,6vw),24px);
+  text-align: center;
 }
 
 /* CornerGuide.js styles */
@@ -292,11 +229,11 @@
   user-select: none;
 }
 
-/*.guideContainer {*/
-/*  position: -webkit-sticky;*/
-/*  position: sticky;*/
-/*  bottom: 0;*/
-/*}*/
+.guideContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
 
 .intro {
   max-width: 420px;
@@ -326,11 +263,9 @@
   overflow: hidden;
   position: fixed;
   top: 5px;
-  border-bottom-width: 1px;
-  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   width: 100%;
-  z-index: 2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -364,7 +299,7 @@
 .fin {
   font-family: "Franchise", monospace;
   color: gray;
-  font-size: min(64px,8vmin);
+  font-size: min(72px,8vmin);
 }
 
 /* IntroPage.js styles */
@@ -410,7 +345,10 @@
 
 .hoverText {
   color: white;
-  text-shadow: 0 0 10px #000000;
+  /*text-shadow: 0 0 10px #000000;*/
+  filter:
+    drop-shadow(2px 2px 10px black)
+    drop-shadow(-2px -2px 10px black);
   font-weight: bolder;
   position: absolute;
   top: 50%;

@@ -90,8 +90,8 @@ export class FreelancePage extends Component {
             )
         }
 
-        const imageOneStyle = (this.props.mobile) ? "mobileImage" : "clientPreview1";
-        const imageTwoStyle = (this.props.mobile) ? "mobileImage" : "clientPreview2";
+        const imageOneStyle = (this.props.mobile) ? "mobileClientPreview" : "clientPreview1";
+        const imageTwoStyle = (this.props.mobile) ? "mobileClientPreview" : "clientPreview2";
 
         return(
             <View style={styles.container} ref={this.props.refProp}>
