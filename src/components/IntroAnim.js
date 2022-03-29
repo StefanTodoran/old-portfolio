@@ -72,7 +72,7 @@ export class IntroAnim extends Component {
                         <div className={"outerCircle"}/>
                         <div className={"innerCircle"}/>
                         <svg className={"circleContainer"}>
-                            <circle class="spinner" cx="50vw" cy="50vh"/>
+                            <circle className="spinner" cx="50vw" cy="50vh"/>
                         </svg>
                     </div>
                     {/*<div className={"edgeFade"}/>*/}

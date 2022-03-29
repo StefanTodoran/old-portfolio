@@ -7,6 +7,7 @@ import client1 from "../assets/client1.png";
 import client2 from "../assets/client2.png";
 import client3 from "../assets/client3.png";
 import client4 from "../assets/client4.png";
+import client5 from "../assets/client5.png";
 
 export class LogoBand extends Component {
     render() {
@@ -21,8 +22,9 @@ export class LogoBand extends Component {
                     <View style={styles.logos}>
                         <img title={"Sound Integrative Women's Health"} className={"mobileLogo"} src={client1} draggable={false}/>
                         <img title={"Alina Hairstylist"} className={"mobileLogo"} src={client2} draggable={false}/>
-                        <img title={"TDSW Solutions Corp."} className={"mobileLogo"} src={client4} draggable={false}/>
                         <img title={"Inner Harmony Acupuncture"} className={"mobileLogo"} src={client3} draggable={false}/>
+                        <img title={"TDSW Solutions Corp."} className={"mobileLogo"} src={client4} draggable={false}/>
+                        <img title={"GeoSMART"} className={"mobileLogo"} src={client5} draggable={false}/>
                     </View>
                     <View style={styles.logosTitle}>
                         <div className={"longLine"}/>
@@ -43,6 +45,7 @@ export class LogoBand extends Component {
                     <HoverImage logoStyle={"clientLogo"} src={client2} title={"Alina Hairstylist"}/>
                     <HoverImage logoStyle={"clientLogo"} src={client3} title={"Inner Harmony Acupuncture"}/>
                     <HoverImage logoStyle={"clientLogo"} src={client4} title={"TDSW Solutions Corp."}/>
+                    <HoverImage logoStyle={"clientLogo"} src={client5} title={"GeoSMART Group"}/>
                 </View>
                 <View style={styles.logosTitle}>
                     <div className={"longLine"}/>

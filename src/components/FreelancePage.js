@@ -5,12 +5,7 @@ import {StyleSheet} from "react-native";
 import './Components.css';
 import preview1 from "../assets/iha_preview_alt.png";
 import preview3 from "../assets/siwh_preview_1.png";
-import client1 from "../assets/client1.png";
-import client2 from "../assets/client2.png";
-import client3 from "../assets/client3.png";
-import client4 from "../assets/client4.png";
 import {ParallaxSection} from "./ParallaxSection";
-import {HoverImage} from "./HoverImage";
 import {LogoBand} from "./LogoBand";
 
 export class FreelancePage extends Component {

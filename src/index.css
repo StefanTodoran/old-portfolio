@@ -23,9 +23,3 @@ code {
   src: local("Franchise"),
   url("./assets/Franchise.ttf") format("truetype");
 }
-
-@font-face {
-  font-family: "FranchiseFilled";
-  src: local("FranchiseFilled"),
-  url("./assets/FranchiseFilled.ttf") format("truetype");
-}

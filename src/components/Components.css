@@ -102,7 +102,7 @@
 }
 
 .mobileLogo {
-  width: 20vw;
+  width: 16vw;
 }
 
 /* = project and freelance description animation = */
@@ -195,6 +195,7 @@
   border-color: rgba(0,0,0,0);
   border-style: solid;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .clickableTitle:hover {
@@ -342,6 +343,12 @@
   transform: scale(1);
   border-radius: 15px;
 }
+
+/*.overlay:hover + .clientLogo {*/
+/*  filter: grayscale(100%);*/
+/*  -moz-filter: grayscale(100%);*/
+/*  -webkit-filter: grayscale(100%);*/
+/*}*/
 
 .hoverText {
   color: white;

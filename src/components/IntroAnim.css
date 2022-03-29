@@ -76,10 +76,11 @@
 }
 
 .spinner {
+    flex: 1;
     fill: none;
     stroke: rgba(0, 0, 0, 0.1);
     stroke-dasharray: 1 3200;
-    r: 500;
+    r: 500px;
     stroke-width: 1000;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
