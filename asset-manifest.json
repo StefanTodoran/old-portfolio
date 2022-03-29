@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7c26b6c7.css",
-    "main.js": "/static/js/main.c340eafa.js",
+    "main.css": "/static/css/main.4495b584.css",
+    "main.js": "/static/js/main.ef949a1b.js",
     "static/js/787.30237536.chunk.js": "/static/js/787.30237536.chunk.js",
     "static/media/technivision.gif": "/static/media/technivision.de82e853b58d625dec5c.gif",
     "static/media/datina.gif": "/static/media/datina.46784b9371e5864d3b86.gif",
@@ -14,16 +14,16 @@
     "static/media/Resume.pdf": "/static/media/Resume.beaab9f7a38eff01450a.pdf",
     "static/media/linguini.png": "/static/media/linguini.18362c7affc6a3a31d64.png",
     "static/media/NixieOne.otf": "/static/media/NixieOne.9159ac93a534b8d32340.otf",
-    "static/media/FranchiseFilled.ttf": "/static/media/FranchiseFilled.28808ba5190d3ddf1292.ttf",
     "static/media/Franchise.ttf": "/static/media/Franchise.412b5a60dbe9ccf19599.ttf",
     "static/media/client4.png": "/static/media/client4.2940ea94e14fb409369a.png",
+    "static/media/client5.png": "/static/media/client5.5d6a86e3ed364f954ade.png",
     "index.html": "/index.html",
-    "main.7c26b6c7.css.map": "/static/css/main.7c26b6c7.css.map",
-    "main.c340eafa.js.map": "/static/js/main.c340eafa.js.map",
+    "main.4495b584.css.map": "/static/css/main.4495b584.css.map",
+    "main.ef949a1b.js.map": "/static/js/main.ef949a1b.js.map",
     "787.30237536.chunk.js.map": "/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c26b6c7.css",
-    "static/js/main.c340eafa.js"
+    "static/css/main.4495b584.css",
+    "static/js/main.ef949a1b.js"
   ]
 }
