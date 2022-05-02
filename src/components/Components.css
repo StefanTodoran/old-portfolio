@@ -96,13 +96,61 @@
   padding-left: 15px;
 }
 
-/* client logo image sizing */
-.clientLogo {
-  width: max(10vw, 150px);
+/* client logo image sizing and scrolling */
+.mobile-logo {
+  width: max(11vw, 65px);
 }
 
-.mobileLogo {
-  width: 16vw;
+.hover-image {
+  width: max(11vw, 125px);
+  height: max(11vw, 125px);
+  justify-content: center;
+  align-items: center;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  filter: grayscale(1);
+  transition: filter ease 0.5s;
+}
+.hover-image:hover {
+  filter: none;
+  cursor: pointer;
+}
+
+.hover-image, .mobile-logo {
+  position: absolute;
+  animation: scroll linear 28s infinite, edgeFade linear 28s infinite;
+  animation-delay: calc(var(--order) * -4700ms);
+  opacity: 0;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(calc(-1*max(50vw,250px)));
+  }
+  to {
+    transform: translateX(max(50vw,250px));
+  }
+}
+@media (min-width: 500px) {
+  @keyframes edgeFade {
+    15% { opacity: 0; }
+    30% { opacity: 1; }
+
+    70% { opacity: 1; }
+    85% { opacity: 0; }
+  }
+}
+@media (max-width: 500px) {
+  @keyframes edgeFade {
+    25% { opacity: 0; }
+    40% { opacity: 1; }
+
+    60% { opacity: 1; }
+    75% { opacity: 0; }
+  }
 }
 
 /* = project and freelance description animation = */
@@ -152,10 +200,10 @@
   text-align: center;
 }
 
-.filledTitle {
-  filter:
-    drop-shadow(-6px 0px 2px white)
-    drop-shadow(-7px 0px 1px white)
+.filledTitle:before {
+  /*filter:*/
+  /*  drop-shadow(-6px 0px 2px white)*/
+  /*  drop-shadow(-7px 0px 1px white)*/
 }
 
 .title, .filledTitle {

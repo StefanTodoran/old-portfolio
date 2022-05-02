@@ -89,7 +89,7 @@ export class MainApp extends Component {
                     <div className={"background activeBackground"}/>
                     <div className={"grain activeGrain"}/>
                     <div className={"wholeView wholeViewActive"}>
-                        <div  className={"fadeInContainer"}>
+                        <div className={"fadeInContainer"}>
                             <IntroPage mobile={mobile}/>
                             <AboutPage mobile={mobile} effectsCallback={this.setEffects}/>
 

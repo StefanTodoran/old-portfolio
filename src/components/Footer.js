@@ -40,7 +40,7 @@ export class Footer extends Component {
                 <br/>
                 <div className={"footerText"}>
                     <div>© Stefan Todoran</div>
-                    <div>Last Updated 2/24/22</div>
+                    <div>Last Updated 4/29/22</div>
                 </div>
                 <br/>
             </div>
