@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.27135d90.css",
-    "main.js": "/static/js/main.4fbe91ee.js",
+    "main.js": "/static/js/main.a93e7c3f.js",
     "static/js/787.30237536.chunk.js": "/static/js/787.30237536.chunk.js",
     "static/media/technivision.gif": "/static/media/technivision.de82e853b58d625dec5c.gif",
     "static/media/datina.gif": "/static/media/datina.46784b9371e5864d3b86.gif",
@@ -11,7 +11,7 @@
     "static/media/portrait.png": "/static/media/portrait.9616c51239e73c86526d.png",
     "static/media/siwh_preview_1.png": "/static/media/siwh_preview_1.ef7b2c8ca5baeee8bcd4.png",
     "static/media/client2.png": "/static/media/client2.73f1e830d68c911e015b.png",
-    "static/media/Resume.pdf": "/static/media/Resume.52efc80681382d4215c9.pdf",
+    "static/media/Resume.pdf": "/static/media/Resume.c25ffb703d011b847856.pdf",
     "static/media/linguini.png": "/static/media/linguini.18362c7affc6a3a31d64.png",
     "static/media/NixieOne.otf": "/static/media/NixieOne.9159ac93a534b8d32340.otf",
     "static/media/client6.png": "/static/media/client6.a81bbaedaec8ae51bce7.png",
@@ -20,11 +20,11 @@
     "static/media/client5.png": "/static/media/client5.5d6a86e3ed364f954ade.png",
     "index.html": "/index.html",
     "main.27135d90.css.map": "/static/css/main.27135d90.css.map",
-    "main.4fbe91ee.js.map": "/static/js/main.4fbe91ee.js.map",
+    "main.a93e7c3f.js.map": "/static/js/main.a93e7c3f.js.map",
     "787.30237536.chunk.js.map": "/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27135d90.css",
-    "static/js/main.4fbe91ee.js"
+    "static/js/main.a93e7c3f.js"
   ]
 }
