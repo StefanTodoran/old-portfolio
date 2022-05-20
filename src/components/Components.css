@@ -203,7 +203,7 @@
 .filledTitle:before {
   /*filter:*/
   /*  drop-shadow(-6px 0px 2px white)*/
-  /*  drop-shadow(-7px 0px 1px white)*/
+  /*  drop-shadow(-7px 0px 1px white);*/
 }
 
 .title, .filledTitle {
@@ -323,6 +323,17 @@
   background-image: url(../assets/strip.png);
   background-size: contain;
 }
+
+/*.navbar:before {*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+
+/*  content: "";*/
+/*  background-color: whitesmoke;*/
+/*  opacity: 0.25;*/
+/*}*/
 
 /* Footer.js styles */
 

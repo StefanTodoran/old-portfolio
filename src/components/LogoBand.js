@@ -60,7 +60,7 @@ export class LogoBand extends Component {
                     {clientLogo(3, client3, "https://www.acupuncture-5e.com/")}
                     {clientLogo(4, client4)}
                     {clientLogo(5, client5, "https://geo-smart.github.io/geosmartsite/")}
-                    {clientLogo(6, client6)}
+                    {clientLogo(6, client6, "http://gogleam.co/")}
                 </View>
                 <View style={styles.logosTitle}>
                     <div className={"longLine"}/>
