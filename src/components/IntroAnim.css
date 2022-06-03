@@ -16,14 +16,30 @@
 }
 
 @keyframes pulse {
-    0% {transform: scale(1);}
-    30% {transform: scale(1);}
-    33% {transform: scale(1.2);}
-    36% {transform: scale(0.9);}
-    39% {transform: scale(1.2);}
-    42% {transform: scale(0.9);}
-    45% {transform: scale(1);}
-    100% {transform: scale(1);}
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(1.2);
+    }
+    36% {
+        transform: scale(0.9);
+    }
+    39% {
+        transform: scale(1.2);
+    }
+    42% {
+        transform: scale(0.9);
+    }
+    45% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .countdownNumber {
@@ -88,7 +104,9 @@
 }
 
 @keyframes rotate {
-    100% { stroke-dasharray: 3200 0; }
+    100% {
+        stroke-dasharray: 3200 0;
+    }
 }
 
 .outerCircle, .innerCircle {

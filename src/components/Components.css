@@ -180,6 +180,10 @@
   text-decoration: none;
 }
 
+.clickableThing {
+  cursor: pointer;
+}
+
 /* = various text styles = */
 
 .paragraph, .intro, .hoverText {
@@ -282,12 +286,14 @@
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
+  pointer-events: none;
 }
 
 .intro {
   max-width: 420px;
   max-font-size: 27px;
   font-size: calc(10px + 0.9vw);
+  pointer-events: initial;
 }
 
 .quote, .quoteRight {
@@ -369,6 +375,7 @@
   margin-right: 2vw;
   display: flex;
   flex-direction: column-reverse;
+  cursor: pointer;
 }
 
 /* HoverImage.js styles */
