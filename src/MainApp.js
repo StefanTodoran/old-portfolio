@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {StyleSheet} from "react-native";
 import {CornerGuide} from "./components/CornerGuide";
 
 import './App.css';
@@ -10,6 +9,7 @@ import {Header} from "./components/Header";
 import {IntroPage} from "./components/IntroPage";
 import {AboutPage} from "./components/AboutPage";
 import {IntroAnim} from "./components/IntroAnim";
+import {ModalWindow} from "./components/ModalWindow";
 
 export class MainApp extends Component {
   constructor(props) {
@@ -25,6 +25,7 @@ export class MainApp extends Component {
     // tall mode, while desktop switches based on the window width.
 
     introFinished: false,
+    modalVisible: false,
   }
 
   componentDidMount() {
@@ -48,27 +49,18 @@ export class MainApp extends Component {
   }
 
   setEffects = (active) => {
-    const spots = document.querySelector('.filmSpots');
-    const bg = document.querySelector('.background');
-    const grain = document.querySelector('.grain');
-    const inner = document.querySelector('.filmScratchInner');
-    const outer = document.querySelector('.filmScratchOuter');
-    const stutter = document.querySelector('.wholeView');
+    const effects = [
+      '.filmSpots', '.background', '.filmScratchInner',
+      '.filmScratchOuter', '.wholeView', '.grain',
+    ];
 
-    if (active) {
-      spots.classList.add('activeFilmSpots');
-      bg.classList.add('activeBackground');
-      grain.classList.add('activeGrain');
-      inner.classList.add('activeScratchInner');
-      outer.classList.add('activeScratchOuter');
-      stutter.classList.add('wholeViewActive');
-    } else {
-      spots.classList.remove('activeFilmSpots');
-      bg.classList.remove('activeBackground');
-      grain.classList.remove('activeGrain');
-      inner.classList.remove('activeScratchInner');
-      outer.classList.remove('activeScratchOuter');
-      stutter.classList.remove('wholeViewActive');
+    for (let i = 0; i < effects.length; i++) {
+      const effect = document.querySelector(effects[i]);
+      if (active) {
+        effect.classList.add('active');
+      } else {
+        effect.classList.remove('active');
+      }
     }
   }
 
@@ -83,12 +75,12 @@ export class MainApp extends Component {
         {!this.state.introFinished && <IntroAnim endIntroCallback={this.endIntro}/>}
 
         {this.state.introFinished && <div>
-          <div className={"filmSpots activeFilmSpots"}/>
-          <div className={"filmScratchInner activeScratchInner"}/>
-          <div className={"filmScratchOuter activeScratchOuter"}/>
-          <div className={"background activeBackground"}/>
-          <div className={"grain activeGrain"}/>
-          <div className={"wholeView wholeViewActive"}>
+          <div className={"filmSpots active"}/>
+          <div className={"filmScratchInner active"}/>
+          <div className={"filmScratchOuter active"}/>
+          <div className={"background active"}/>
+          <div className={"grain active"}/>
+          <div className={"wholeView active"}>
             <div className={"fadeInContainer"}>
               <IntroPage mobile={mobile} effectsCallback={this.setEffects}/>
               <AboutPage mobile={mobile}/>
@@ -101,14 +93,16 @@ export class MainApp extends Component {
             </div>
           </div>
           <div className={"fadeInContainer"}>
-            <Header freelanceScroll={this.freelanceScroll} mobile={mobile}
+            <Header freelanceScroll={this.freelanceScroll} mobile={mobile} toggleModal={this.toggleModal}
                     projectsScroll={this.projectsScroll} introScroll={this.introScroll}/>
+            <ModalWindow visible={this.state.modalVisible} toggleModal={this.toggleModal}/>
           </div>
         </div>}
       </div>
     );
   }
 
+  toggleModal = () => this.setState({modalVisible: !this.state.modalVisible});
   freelanceScroll = () => this.freelanceRef.current.scrollIntoView();
   projectsScroll = () => this.projectsRef.current.scrollIntoView();
   introScroll = () => {
@@ -118,14 +112,3 @@ export class MainApp extends Component {
     });
   };
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flex: 1,
-  },
-  filler: {
-    height: "15vh",
-  },
-});

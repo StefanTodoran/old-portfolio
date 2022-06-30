@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Components.css';
+import './Components.scss';
 import {View} from "react-native-web";
 import {NavbarItem} from "./NavbarItem";
 
@@ -14,10 +14,12 @@ export class Header extends Component {
                       styleClass={"navbarItem filledTitle clickableTitle"}/>
           <NavbarItem text={"PROJECTS"} onPress={this.props.projectsScroll}
                       styleClass={"navbarItem filledTitle clickableTitle"}/>
+          <NavbarItem text={"COLLABORATE"} onPress={this.props.toggleModal}
+                      styleClass={"navbarItem filledTitle clickableTitle lastItem"}/>
         </View>
-        {!this.props.mobile && <View style={{flexDirection: "row", marginRight: 10}}>
+        <View style={{flexDirection: "row", marginRight: 10}}>
           <div className={"menuName filledTitle"}>STEFAN TODORAN</div>
-        </View>}
+        </View>
       </div>
     );
   }

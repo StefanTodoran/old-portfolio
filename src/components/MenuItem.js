@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Components.css';
+import './Components.scss';
 import {View} from "react-native-web";
 
 export class MenuItem extends Component {

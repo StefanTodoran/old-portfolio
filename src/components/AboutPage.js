@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {View} from "react-native-web";
 import {StyleSheet} from "react-native";
-import './Components.css';
+import './Components.scss';
 import resumePDF from "../assets/Resume.pdf";
 import {MenuItem} from "./MenuItem";
 

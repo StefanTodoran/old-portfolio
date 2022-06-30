@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {TouchableOpacity} from "react-native-web";
-import './Components.css';
+import './Components.scss';
 
 export class NavbarItem extends Component {
   render() {

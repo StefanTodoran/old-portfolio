@@ -1,3 +1,7 @@
+/* Thanks to T. H. Doan for the codepen that inspired */
+/* the countdown effect, especially the way the circle */
+/* sweeping effect works! */
+
 .fullScreenContainer {
     overflow: hidden;
     height: 100vh; /* with 100% here, pulse anim causes scroll bar to appear and disappear */

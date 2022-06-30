@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './Components.css';
+import './Components.scss';
 import {View} from "react-native-web";
 import {StyleSheet} from "react-native";
 import client1 from "../assets/client1.png";

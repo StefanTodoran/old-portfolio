@@ -1,29 +1,24 @@
 import React, {Component} from "react";
-import {TouchableOpacity, View} from "react-native-web";
-import {StyleSheet} from "react-native";
+import {TouchableOpacity} from "react-native-web";
 import './IntroAnim.css';
 import '../App.css';
 
 export class IntroAnim extends Component {
   state = {
     started: false,
-    header: false,
     countdown: 3,
   }
 
   startIntro = () => {
     this.setState({started: true});
-    const spots = document.querySelector('.filmSpots');
-    const bg = document.querySelector('.background');
-    const grain = document.querySelector('.grain');
-    const inner = document.querySelector('.filmScratchInner');
-    const outer = document.querySelector('.filmScratchOuter');
+    const effects = [
+      '.filmSpots', '.background', '.grain', '.filmScratchInner', '.filmScratchOuter',
+    ];
 
-    spots.classList.add('activeFilmSpots');
-    bg.classList.add('activeBackground');
-    grain.classList.add('activeGrain');
-    inner.classList.add('activeScratchInner');
-    outer.classList.add('activeScratchOuter');
+    for (let i = 0; i < effects.length; i++) {
+      const effect = document.querySelector(effects[i]);
+      effect.classList.add('active');
+    }
 
     setTimeout(() => {
       this.setState({countdown: 2});
@@ -34,10 +29,6 @@ export class IntroAnim extends Component {
     setTimeout(() => {
       this.props.endIntroCallback();
     }, 3000);
-  }
-
-  setHeader = (state) => {
-    this.setState({header: state});
   }
 
   render() {
@@ -84,21 +75,8 @@ export class IntroAnim extends Component {
               <circle className="spinner" cx="50vw" cy="50vh"/>
             </svg>
           </div>
-          {/*<div className={"edgeFade"}/>*/}
         </div>}
       </div>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  filler: {
-    height: "100vh",
-  },
-  container: {
-    height: "100vh",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-  }
-});

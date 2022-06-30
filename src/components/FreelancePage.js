@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {View} from "react-native-web";
 import {StyleSheet} from "react-native";
 
-import './Components.css';
+import './Components.scss';
 import preview1 from "../assets/iha_preview_alt.png";
 import preview3 from "../assets/siwh_preview_1.png";
 import {ParallaxSection} from "./ParallaxSection";

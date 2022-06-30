@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Components.css';
+import './Components.scss';
 
 export class Footer extends Component {
     state = {

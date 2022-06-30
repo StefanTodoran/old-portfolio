@@ -1,3 +1,13 @@
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
 /* Animation for three arrows svg graphic */
 
 #topArrow {
@@ -111,11 +121,11 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  filter: grayscale(1);
-  transition: filter ease 0.5s;
+  @include vendor-prefix('filter', 'grayscale(1)');
+  @include vendor-prefix('transition', 'filter ease 0.5s');
 }
 .hover-image:hover {
-  filter: none;
+  @include vendor-prefix('filter', 'none');
   cursor: pointer;
 }
 
@@ -186,7 +196,7 @@
 
 /* = various text styles = */
 
-.paragraph, .intro, .hoverText {
+.paragraph, .intro, .hoverText, form, input, textarea {
   font-family: "Nixie One", serif;
   font-size: min(19px, 3.5vmin);
   justify-content: center;
@@ -213,13 +223,10 @@
 .title, .filledTitle {
   font-family: "Franchise", monospace;
   font-size: min(52px, 6vmin);
-  /*background: -webkit-linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);*/
-  /*background: linear-gradient(1deg, rgba(187,71,255,1) 40%, rgba(102,71,255,1) 60%);*/
   background: -webkit-linear-gradient(1deg, var(--light-color) 40%, var(--dark-color) 60%);
   background: linear-gradient(1deg, var(--light-color) 40%, var(--dark-color) 60%);
   background-size: 100% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
+  @include vendor-prefix('background-clip', 'text');
 
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
@@ -251,23 +258,34 @@
 }
 
 .clickableTitle:hover {
-  transform: scale(0.99);
+  transform: scale(0.98);
   /*border-color: rgba(187,71,255,1);*/
   border-color: var(--light-color);
 }
 
 .navbarItem, .menuName, .menuItem {
   margin: 10px;
-  margin-right: 12px;
 }
 
 .navbarItem, .menuName {
-  font-size: max(min(48px,8vw),32px);
+  font-size: max(min(48px,4vw),32px);
 }
 
 .menuItem {
   font-size: max(min(36px,6vw),24px);
   text-align: center;
+}
+
+@media (max-width: 525px) {
+  .lastItem {
+    display: none;
+  }
+}
+
+@media (max-width: 710px) {
+  .menuName {
+    display: none;
+  }
 }
 
 /* CornerGuide.js styles */
@@ -277,9 +295,8 @@
   height: 21vw;
   min-width: 135px;
   min-height: 189px;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
+
+  @include vendor-prefix('user-select', 'none');
 }
 
 .guideContainer {
@@ -287,6 +304,10 @@
   position: sticky;
   bottom: 0;
   pointer-events: none;
+}
+
+.portrait, .quote, .quoteRight, .intro {
+  @include vendor-prefix('backdrop-filter', 'blur(1px)');
 }
 
 .intro {
@@ -318,14 +339,15 @@
   overflow: hidden;
   position: fixed;
   top: 5px;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
   width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 15px;
+
+  @include vendor-prefix('backdrop-filter', 'blur(3px)');
   background-image: url(../assets/strip.png);
   background-size: contain;
 }
@@ -410,15 +432,8 @@
   border-radius: 15px;
 }
 
-/*.overlay:hover + .clientLogo {*/
-/*  filter: grayscale(100%);*/
-/*  -moz-filter: grayscale(100%);*/
-/*  -webkit-filter: grayscale(100%);*/
-/*}*/
-
 .hoverText {
   color: white;
-  /*text-shadow: 0 0 10px #000000;*/
   filter:
     drop-shadow(2px 2px 10px black)
     drop-shadow(-2px -2px 10px black);
@@ -426,8 +441,81 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  @include vendor-prefix('transform', 'translate(-50%, -50%)');
   text-align: center;
+}
+
+/* ModalWindow.js styles */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.25);
+  @include vendor-prefix('backdrop-filter', 'blur(1px)');
+  animation: modalIn 0.5s;
+}
+
+.modalWindow {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  margin-top: 5vh;
+  padding: 25px;
+
+  background-color: #F8F8F8;
+  border-radius: 30px;
+  @include vendor-prefix('box-shadow', 'inset 0 0 0 10px #ddd, 0 0 20px 10px #00000044');
+
+  overflow: hidden;
+}
+
+@keyframes modalIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.modalNavigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modalTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 27.5px;
+  margin-left: 25px;
+}
+
+@media (max-width: 525px) {
+  .modalTitle {
+    margin-top: 35px;
+  }
+}
+
+.modalDesc {
+  margin-top: 100px;
+  max-width: 500px;
+}
+
+textarea {
+  max-width: min(400px, 75vw);
+}
+
+#close-button, #help-button {
+  cursor: pointer;
+}
+
+#close-button:hover circle, #help-button:hover circle {
+  r: 24;
 }

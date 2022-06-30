@@ -3,7 +3,7 @@ import {View} from "react-native-web";
 import {StyleSheet} from "react-native";
 import {ParallaxSection} from "./ParallaxSection";
 
-import './Components.css';
+import './Components.scss';
 import technivision from "../assets/technivision.gif";
 import linguini from "../assets/linguini.png";
 import datina from "../assets/datina.gif";
