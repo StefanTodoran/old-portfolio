@@ -20,6 +20,10 @@ export class FreelancePage extends Component {
         })
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
     handleScroll = () => {
         if (!this.props.mobile) {
             this.handleParallax('.clientPreview1','.firstDesc');

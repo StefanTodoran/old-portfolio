@@ -65,7 +65,7 @@ export class IntroAnim extends Component {
           </TouchableOpacity>
         </div>}
         {this.state.started && <div className={"full"}>
-          <div className={"wholeView wholeViewActive"}>
+          <div className={"wholeView active"}>
             <div className={"countdownNumber"}>{this.state.countdown}</div>
             <div className={"horizontalLine"}/>
             <div className={"verticalLine"}/>

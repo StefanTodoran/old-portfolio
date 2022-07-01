@@ -7,6 +7,7 @@ export class NavbarItem extends Component {
     return (
       <TouchableOpacity onPress={this.props.onPress}>
         <div className={this.props.styleClass}>{this.props.text}</div>
+        <div className={this.props.styleClass + " filledTitle"}>{this.props.text}</div>
       </TouchableOpacity>
     );
   }

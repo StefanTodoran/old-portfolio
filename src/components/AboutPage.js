@@ -63,7 +63,7 @@ export class AboutPage extends Component {
               <div className={"menuItem title clickableTitle"}>CONNECT</div>
             </a>
 
-            <a href={mail} target="_blank" className={"noUnderlineLink"}>
+            <a href={this.props.toggleModal} target="_blank" className={"noUnderlineLink"}>
               <View style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
                 <svg width="57" height="49" viewBox="0 0 41 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="Untitled (1) 1">
@@ -239,8 +239,8 @@ export class AboutPage extends Component {
     return (
       <View style={styles.scrollContainer}>
         <View style={{flex: 4, flexDirection: "row", justifyContent: "flex-end"}}>
-          <MenuItem labelText={"CONNECT"} svgIcon={connectSVG} hoverCallback={this.connectState} onClick={linkedIn}/>
-          <MenuItem labelText={"CONTACT"} svgIcon={contactSVG} hoverCallback={this.contactState} onClick={mail}/>
+          <MenuItem labelText={"CONNECT"} svgIcon={connectSVG} hoverCallback={this.connectState} onClick={linkedIn} useHref={true}/>
+          <MenuItem labelText={"CONTACT"} svgIcon={contactSVG} hoverCallback={this.contactState} onClick={this.props.toggleModal}/>
         </View>
         <View style={{flex: 5}}>
           <svg width="200px" height="200px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

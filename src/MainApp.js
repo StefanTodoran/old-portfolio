@@ -30,6 +30,7 @@ export class MainApp extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.listenToResize)
+    this.listenToResize();
   }
 
   componentWillUnmount() {
@@ -83,7 +84,7 @@ export class MainApp extends Component {
           <div className={"wholeView active"}>
             <div className={"fadeInContainer"}>
               <IntroPage mobile={mobile} effectsCallback={this.setEffects}/>
-              <AboutPage mobile={mobile}/>
+              <AboutPage mobile={mobile} toggleModal={this.toggleModal}/>
 
               <CornerGuide mobile={mobile}/>
               <FreelancePage mobile={mobile} refProp={this.freelanceRef}/>

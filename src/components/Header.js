@@ -9,16 +9,17 @@ export class Header extends Component {
       <div className={"navbar"}>
         <View style={{flexDirection: "row"}}>
           <NavbarItem text={"INTRO"} onPress={this.props.introScroll}
-                      styleClass={"navbarItem filledTitle clickableTitle"}/>
+                      styleClass={"navbarItem title clickableTitle"}/>
           <NavbarItem text={"FREELANCE"} onPress={this.props.freelanceScroll}
-                      styleClass={"navbarItem filledTitle clickableTitle"}/>
+                      styleClass={"navbarItem title clickableTitle"}/>
           <NavbarItem text={"PROJECTS"} onPress={this.props.projectsScroll}
-                      styleClass={"navbarItem filledTitle clickableTitle"}/>
+                      styleClass={"navbarItem title clickableTitle"}/>
           <NavbarItem text={"COLLABORATE"} onPress={this.props.toggleModal}
-                      styleClass={"navbarItem filledTitle clickableTitle lastItem"}/>
+                      styleClass={"navbarItem title clickableTitle lastItem"}/>
         </View>
         <View style={{flexDirection: "row", marginRight: 10}}>
-          <div className={"menuName filledTitle"}>STEFAN TODORAN</div>
+          <div className={"menuName title"}>STEFAN TODORAN</div>
+          <div className={"menuName title filledTitle"}>STEFAN TODORAN</div>
         </View>
       </div>
     );

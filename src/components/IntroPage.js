@@ -66,7 +66,7 @@ export class IntroPage extends Component {
                   </g>
                   <defs>
                     <filter id="filter0_i_0_1" x="-49.2821" y="-46.1026" width="158.974" height="165.333"
-                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                       <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
@@ -322,18 +322,9 @@ export class IntroPage extends Component {
     return (
       <View style={styles.scrollContainer}>
         <View style={{flex: 4, flexDirection: "row", justifyContent: "flex-end"}}>
-          <MenuItem labelText={"RESUME"} svgIcon={resumeSVG} hoverCallback={this.resumeState} onClick={resumePDF}/>
-          <div className={"iconTextBox"}>
-            {/* We don't just use MenuItem below since href can't call a callback and I'm lazy to
-             rework MenuItem.js, maybe change this another time.. */}
-            <a onMouseDown={this.toggleEffects} target="_blank" className={"noUnderlineLink"}
-               onMouseEnter={this.accessibilityState} onMouseLeave={this.accessibilityState}>
-              <View style={{flexDirection: "row", justifyContent: "center"}}>
-                {toggleSVG()}
-              </View>
-              <div className={"menuItem title clickableTitle"}>{this.state.effects ? 'EFFECTS ON' : 'NO EFFECTS'}</div>
-            </a>
-          </div>
+          <MenuItem labelText={"RESUME"} svgIcon={resumeSVG} hoverCallback={this.resumeState} onClick={resumePDF} useHref={true}/>
+          <MenuItem labelText={this.state.effects ? 'EFFECTS ON' : 'NO EFFECTS'} svgIcon={toggleSVG} hoverCallback={this.accessibilityState} 
+            onClick={this.toggleEffects}/>
         </View>
         <View style={{flex: 5}}>
           <svg width="200px" height="200px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

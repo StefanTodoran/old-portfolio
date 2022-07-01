@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Components.scss';
 
 export class Footer extends Component {
@@ -15,8 +15,14 @@ export class Footer extends Component {
         }
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
     handleScroll = () => {
-        this.handleParallax('.fin','.finContainer');
+        if (!this.props.mobile) {
+            this.handleParallax('.fin', '.finContainer');
+        }
     }
 
     handleParallax(image, description) {
@@ -36,13 +42,13 @@ export class Footer extends Component {
                 {!this.props.mobile && <div className={"finContainer"}>
                     <div className={"fin"}>FIN</div>
                 </div>}
-                <div className={"longLine"}/>
-                <br/>
+                <div className={"longLine"} />
+                <br />
                 <div className={"footerText"}>
                     <div>© Stefan Todoran</div>
                     <div>Last Updated 4/29/22</div>
                 </div>
-                <br/>
+                <br />
             </div>
         );
     }

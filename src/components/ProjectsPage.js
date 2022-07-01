@@ -20,6 +20,10 @@ export class ProjectsPage extends Component {
     })
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   handleScroll = () => {
     if (!this.props.mobile) {
       this.handleParallax('.tvParallax', '.tvDesc');

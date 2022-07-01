@@ -38,7 +38,7 @@ html {
 /* END SHARED STYLES */
 
 /* Antique film stutter effect */
-.wholeViewActive {
+.wholeView.active {
   animation: stutter 10s infinite;
 }
 
